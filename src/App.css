@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  align-items: center;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+  margin: 0;
+  text-align: left;
+}
+
+.App-menu {
+  list-style-type: none;
+}
+
+.App-menu li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.App-intro {
+  font-size: large;
+}
