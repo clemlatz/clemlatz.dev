@@ -16,7 +16,7 @@ export default class ExperienceList extends React.Component {
   }
 
   async _fetchExperiences() {
-    const response    = await fetch('/data/experiences.json');
+    const response    = await fetch('data/experiences.json');
     const experiences = await response.json();
 
     this.setState(experiences);
