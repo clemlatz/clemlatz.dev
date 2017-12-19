@@ -1,0 +1,12 @@
+.Experience {
+  margin-bottom: 20px;
+}
+
+.Experience .title {
+  margin: 0 0 3px;
+}
+
+.Experience .year {
+  opacity: .75;
+  padding-right: 15px;
+}

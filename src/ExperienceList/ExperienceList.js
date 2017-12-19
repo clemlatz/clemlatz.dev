@@ -26,14 +26,17 @@ export default class ExperienceList extends React.Component {
 
     let experiences = null;
     if (this.state.experiences !== null) {
-      experiences = this.state.experiences.map(experience => {
+      const sortedExperiences = this.state.experiences.sort((a,b) => {
+        return b.startYear - a.startYear;
+      });
+      experiences = sortedExperiences.map(experience => {
         return <Experience key={experience.id} {...experience} />;
       });
     }
 
     return (
       <div>
-        <h1>Expériences</h1>
+        <h1>Parcours</h1>
         {experiences}
       </div>
     );
