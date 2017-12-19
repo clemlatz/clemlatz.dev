@@ -27,7 +27,7 @@ export default class ExperienceList extends React.Component {
     let experiences = null;
     if (this.state.experiences !== null) {
       experiences = this.state.experiences.map(experience => {
-        return <Experience {...experience} />;
+        return <Experience key={experience.id} {...experience} />;
       });
     }
 
