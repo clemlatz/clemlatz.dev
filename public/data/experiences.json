@@ -5,12 +5,14 @@
       "jobTitle": "Développeur front-end",
       "company": "Actialuna",
       "companyUrl": "https://www.actialuna.com",
-      "startYear": 2015
+      "startYear": 2015,
+      "tags": ["javascript", "css", "html", "ruby", "rails", "epub"]
     },
     {
       "id": 2,
       "jobTitle": "Développeur web freelance",
-      "startYear": 2009
+      "startYear": 2009,
+      "tags": ["php", "mysql", "html", "css", "javascript", "jquery"]
     },
     {
       "id": 3,
@@ -24,7 +26,8 @@
       "jobTitle": "Responsable édition numérique",
       "company": "Éditions Le Bélial'",
       "companyUrl": "https://www.belial.fr",
-      "startYear": 2010
+      "startYear": 2010,
+      "tags": ["epub", "onyx"]
     },
     {
       "id": 5,
@@ -47,7 +50,8 @@
       "company": "Université Paris-Nanterre",
       "companyUrl": "http://polemlivre.parisnanterre.fr/",
       "startYear": 2011,
-      "endYear": 2014
+      "endYear": 2014,
+      "tags": ["html", "css", "wordpress"]
     }
   ]
 }

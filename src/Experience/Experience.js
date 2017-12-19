@@ -20,12 +20,19 @@ export default function(props) {
     }
   }
 
+  let tags = null;
+  if (props.tags) {
+    tags = props.tags.map(tag => <span key={tag} className="tag">#{tag}</span>);
+    tags = <div className="tags">{tags}</div>;
+  }
+
   return (
     <div className="Experience">
       <h2 className="title">
         {props.jobTitle}
       </h2>
       <span className="year">{props.startYear} {endYear} {company} </span>
+      {tags}
     </div>
   );
 }

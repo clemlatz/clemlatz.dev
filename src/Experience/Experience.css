@@ -10,3 +10,13 @@
   opacity: .75;
   padding-right: 15px;
 }
+
+.Experience .tags {
+  margin-top: 5px;
+}
+
+.Experience .tag {
+  font-size: .9em;
+  opacity: .5;
+  padding-right: 5px;
+}
