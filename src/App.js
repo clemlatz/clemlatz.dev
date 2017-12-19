@@ -4,6 +4,8 @@ import './App.css';
 import HomePage from './pages/Home';
 import SkillsPage from './pages/Skills';
 
+import ExperienceList from './ExperienceList/ExperienceList';
+
 class App extends Component {
   constructor() {
     super();
@@ -46,6 +48,7 @@ class App extends Component {
         </div>
         {this.state.pagesVisibility['home'] && <HomePage />}
         {this.state.pagesVisibility['skills'] && <SkillsPage />}
+        <ExperienceList/>
       </div>
     );
   }
