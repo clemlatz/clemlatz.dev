@@ -3,12 +3,51 @@
     {
       "id": 1,
       "jobTitle": "Développeur front-end",
-      "company": "Actialuna"
+      "company": "Actialuna",
+      "companyUrl": "https://www.actialuna.com",
+      "startYear": 2015
     },
     {
       "id": 2,
-      "jobTitle": "Développeur web",
-      "company": "freelance"
+      "jobTitle": "Développeur web freelance",
+      "startYear": 2009
+    },
+    {
+      "id": 3,
+      "jobTitle": "Gérant de librairie en ligne",
+      "company": "Librairie Ys",
+      "startYear": 2008,
+      "endYear": 2013
+    },
+    {
+      "id": 4,
+      "jobTitle": "Responsable édition numérique",
+      "company": "Éditions Le Bélial'",
+      "companyUrl": "https://www.belial.fr",
+      "startYear": 2010
+    },
+    {
+      "id": 5,
+      "jobTitle": "Apprenti-vendeur en librairie",
+      "company": "Librairies Fontaine",
+      "companyUrl": "https://www.librairiesfontaine.com/",
+      "startYear": 2005,
+      "endYear": 2007
+    },
+    {
+      "id": 6,
+      "jobTitle": "Responsable BD & jeunesse",
+      "company": "Librairie Contretemps",
+      "startYear": 2007,
+      "endYear": 2007
+    },
+    {
+      "id": 7,
+      "jobTitle": "Enseignant Master Métiers du livre",
+      "company": "Université Paris-Nanterre",
+      "companyUrl": "http://polemlivre.parisnanterre.fr/",
+      "startYear": 2011,
+      "endYear": 2014
     }
   ]
 }
