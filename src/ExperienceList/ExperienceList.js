@@ -36,7 +36,6 @@ export default class ExperienceList extends React.Component {
 
     return (
       <div>
-        <h1>Parcours</h1>
         {experiences}
       </div>
     );
