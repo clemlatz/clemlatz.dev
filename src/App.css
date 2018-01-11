@@ -19,6 +19,10 @@
   margin: .5em 0;
 }
 
+.App .site-title a {
+  border: 0;
+}
+
 .App-navigation ul {
   display: flex;
   list-style: none;
