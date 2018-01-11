@@ -31,9 +31,16 @@
   padding: 0;
 }
 
-.App-navigation li {
+.App-navigation li a {
   font-size: 2em;
+  opacity: .5;
   padding-right: .5em;
+  transition: opacity 250ms;
+}
+
+.App-navigation li a.active,
+.App-navigation li a:hover {
+  opacity: 1;
 }
 
 .App-navigation a {

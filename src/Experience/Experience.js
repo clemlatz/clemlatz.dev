@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import './Experience.css';
 
 export default function(props) {
@@ -28,9 +30,11 @@ export default function(props) {
 
   return (
     <div className="Experience">
-      <h2 className="title">
-        {props.jobTitle}
-      </h2>
+      <Link key={props.slug} to={`/experiences/${props.slug}`}>
+        <h2 className="title">
+          {props.jobTitle}
+        </h2>
+      </Link>
       <span className="year">{props.startYear} {endYear} {company} </span>
       {tags}
     </div>

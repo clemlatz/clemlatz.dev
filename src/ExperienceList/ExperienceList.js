@@ -30,7 +30,9 @@ export default class ExperienceList extends React.Component {
         return b.startYear - a.startYear;
       });
       experiences = sortedExperiences.map(experience => {
-        return <Experience key={experience.id} {...experience} />;
+        return (
+          <Experience key={experience.slug} {...experience} />
+        );
       });
     }
 
