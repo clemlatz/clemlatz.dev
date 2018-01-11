@@ -26,7 +26,7 @@ class App extends Component {
               </ul>
             </nav>
           </header>
-          <Route path="/" exact render={() => <div>Home</div>} />
+          <Route path="/" exact render={() => <div>Bienvenue.</div>} />
           <Route path="/experiences" component={ExperienceList} />
           <Route path="/contact" component={Contact} />
         </div>
