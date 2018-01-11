@@ -1,3 +1,7 @@
 import React from 'react';
 
-export default () => <div>contact</div>;
+export default () => (
+  <div>
+    <a href="https://nokto.net/contact/">Contact</a>
+  </div>
+);
