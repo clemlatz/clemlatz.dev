@@ -6,25 +6,12 @@ import Experience from '../Experience/Experience';
 class ExperienceList extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      experiences: null
-    }
   }
 
   componentWillMount() {
-    this._fetchExperiences();
-  }
-
-  async _fetchExperiences() {
-    if (this.props.experiences !== null) {
-      return;
+    if (this.props.experiences === null) {
+      this.props.fetchExperiences();
     }
-
-    const response    = await fetch('data/experiences.json');
-    const experiences = await response.json();
-
-    this.props.onExperiencesLoaded(experiences.experiences);
   }
 
   render() {
@@ -55,11 +42,5 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onExperiencesLoaded: (experiences) => dispatch({ type: 'ADD_EXPERIENCES', experiences })
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ExperienceList);
+export default connect(mapStateToProps)(ExperienceList);
 
