@@ -1,8 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import Experience from '../Experience/Experience';
 
-export default class ExperienceList extends React.Component {
+class ExperienceList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -16,17 +17,21 @@ export default class ExperienceList extends React.Component {
   }
 
   async _fetchExperiences() {
+    if (this.props.experiences !== null) {
+      return;
+    }
+
     const response    = await fetch('data/experiences.json');
     const experiences = await response.json();
 
-    this.setState(experiences);
+    this.props.onExperiencesLoaded(experiences.experiences);
   }
 
   render() {
 
     let experiences = null;
-    if (this.state.experiences !== null) {
-      const sortedExperiences = this.state.experiences.sort((a,b) => {
+    if (this.props.experiences !== null) {
+      const sortedExperiences = this.props.experiences.sort((a,b) => {
         return b.startYear - a.startYear;
       });
       experiences = sortedExperiences.map(experience => {
@@ -43,3 +48,18 @@ export default class ExperienceList extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    experiences: state.experiences
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onExperiencesLoaded: (experiences) => dispatch({ type: 'ADD_EXPERIENCES', experiences })
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ExperienceList);
+
