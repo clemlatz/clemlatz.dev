@@ -1,32 +1,35 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
 import Experience from '../Experience/Experience';
 
-export default class ExperiencePage extends React.Component {
-  state = {
-    experience: null
-  }
-
+class ExperiencePage extends React.Component {
   componentDidMount() {
-    if (this.state.experience && this.props.match.params.slug === this.state.experience.slug) {
+    if (this.props.experiences === null) {
+      this.props.fetchExperiences();
       return;
     }
-
-    this._fetchExperience();
-  }
-
-  async _fetchExperience() {
-    const response    = await fetch('/data/experiences.json');
-    const experiences = await response.json();
-
-    const experience = experiences.experiences.find((experience) => {
-      return experience.slug === this.props.match.params.slug;
-    });
-
-    this.setState({ experience });
   }
 
   render() {
-    return <Experience {...this.state.experience} />
+    if (this.props.experiences === null) {
+      return null;
+    }
+
+    const experience = this.props.experiences.find((experience) => {
+      return experience.slug === this.props.match.params.slug;
+    });
+
+    return <Experience {...experience} />
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    experiences: state.experiences
+  };
+};
+
+export default connect(mapStateToProps)(withRouter(ExperiencePage));
+

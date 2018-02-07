@@ -10,7 +10,7 @@ import Contact from './Contact/Contact';
 
 class App extends Component {
   _fetchExperiences = async () => {
-    const response    = await fetch('data/experiences.json');
+    const response    = await fetch('/data/experiences.json');
     const experiences = await response.json();
 
     this.props.onExperiencesLoaded(experiences.experiences);
@@ -37,7 +37,7 @@ class App extends Component {
           </header>
           <Route path="/" exact render={() => <div>Bienvenue.</div>} />
           <Route path="/experiences" exact render={() => <ExperienceList fetchExperiences={this._fetchExperiences}/>} />
-          <Route path="/experiences/:slug" component={ExperiencePage} />
+          <Route path="/experiences/:slug" render={() => <ExperiencePage fetchExperiences={this._fetchExperiences}/>} />
           <Route path="/contact" component={Contact} />
         </div>
       </BrowserRouter>

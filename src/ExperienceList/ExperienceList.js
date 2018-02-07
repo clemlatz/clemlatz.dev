@@ -4,10 +4,6 @@ import { connect } from 'react-redux';
 import Experience from '../Experience/Experience';
 
 class ExperienceList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
     if (this.props.experiences === null) {
       this.props.fetchExperiences();
