@@ -3,12 +3,15 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-  if (action.type === 'ADD_EXPERIENCES') {
-    return {
-      experiences: action.experiences,
-    }
+  switch (action.type) {
+    case 'ADD_EXPERIENCES':
+      return {
+        ...state ,
+        experiences: action.experiences,
+      };
+    default:
+      return { ...state };
   }
-  return state;
 }
 
 export default reducer;
