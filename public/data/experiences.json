@@ -15,34 +15,12 @@
       "tags": ["php", "mysql", "html", "css", "javascript", "jquery"]
     },
     {
-      "jobTitle": "Gérant de librairie en ligne",
-      "slug": "librys",
-      "company": "Librairie Ys",
-      "startYear": 2008,
-      "endYear": 2013
-    },
-    {
       "jobTitle": "Responsable édition numérique",
       "slug": "belial",
       "company": "Éditions Le Bélial'",
       "companyUrl": "https://www.belial.fr",
       "startYear": 2010,
       "tags": ["epub", "onyx"]
-    },
-    {
-      "jobTitle": "Apprenti-vendeur en librairie",
-      "slug": "fontaine",
-      "company": "Librairies Fontaine",
-      "companyUrl": "https://www.librairiesfontaine.com/",
-      "startYear": 2005,
-      "endYear": 2007
-    },
-    {
-      "jobTitle": "Responsable BD & jeunesse",
-      "slug": "contretemps",
-      "company": "Librairie Contretemps",
-      "startYear": 2007,
-      "endYear": 2007
     },
     {
       "jobTitle": "Enseignant Master Métiers du livre",
@@ -52,6 +30,28 @@
       "startYear": 2011,
       "endYear": 2014,
       "tags": ["html", "css", "wordpress", "epub"]
+    },
+    {
+      "jobTitle": "Gérant de librairie en ligne",
+      "slug": "librys",
+      "company": "Librairie Ys",
+      "startYear": 2008,
+      "endYear": 2013
+    },
+    {
+      "jobTitle": "Responsable BD & jeunesse",
+      "slug": "contretemps",
+      "company": "Librairie Contretemps",
+      "startYear": 2007,
+      "endYear": 2007
+    },
+    {
+      "jobTitle": "Apprenti-vendeur en librairie",
+      "slug": "fontaine",
+      "company": "Librairies Fontaine",
+      "companyUrl": "https://www.librairiesfontaine.com/",
+      "startYear": 2005,
+      "endYear": 2007
     }
   ]
 }

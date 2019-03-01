@@ -14,10 +14,7 @@ class ExperienceList extends React.Component {
 
     let experiences = null;
     if (this.props.experiences !== null) {
-      const sortedExperiences = this.props.experiences.sort((a,b) => {
-        return b.startYear - a.startYear;
-      });
-      experiences = sortedExperiences.map(experience => {
+      experiences = this.props.experiences.map(experience => {
         return (
           <Experience key={experience.slug} {...experience} />
         );
