@@ -11,16 +11,28 @@
     {
       "jobTitle": "Développeur web freelance",
       "slug": "freelance",
+      "company": "Biblys",
+      "companyUrl": "https://www.biblys.fr/",
       "startYear": 2009,
       "tags": ["php", "mysql", "html", "css", "javascript", "jquery"]
     },
     {
-      "jobTitle": "Responsable édition numérique",
+      "jobTitle": "Responsable web & édition numérique",
       "slug": "belial",
       "company": "Éditions Le Bélial'",
       "companyUrl": "https://www.belial.fr",
-      "startYear": 2010,
+      "startYear": 2009,
+      "endYear": 2019,
       "tags": ["epub", "onyx"]
+    },
+    {
+      "jobTitle": "Développeur web",
+      "slug": "draftquest",
+      "company": "DraftQuest",
+      "companyUrl": "https://www.draftquest.fr/",
+      "startYear": 2014,
+      "endYear": 2014,
+      "tags": ["symfony", "php", "mysql", "html", "css", "javascript"]
     },
     {
       "jobTitle": "Enseignant Master Métiers du livre",
