@@ -6,15 +6,15 @@ import './App.css';
 
 import ExperienceList from './ExperienceList/ExperienceList';
 import ExperiencePage from './ExperiencePage/ExperiencePage';
-import Contact from './Contact/Contact';
+import Links from './Links/Links';
 
 class App extends Component {
   _fetchExperiences = async () => {
-    const response    = await fetch('/data/experiences.json');
+    const response = await fetch('/data/experiences.json');
     const experiences = await response.json();
 
     this.props.onExperiencesLoaded(experiences.experiences);
-  }
+  };
 
   render() {
     return (
@@ -30,15 +30,30 @@ class App extends Component {
                   <NavLink to="/experiences">Parcours</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contact">Contact</NavLink>
+                  <NavLink to="/links">Liens</NavLink>
                 </li>
               </ul>
             </nav>
           </header>
-          <Route path="/" exact render={() => <div>Bienvenue.</div>} />
-          <Route path="/experiences" exact render={() => <ExperienceList fetchExperiences={this._fetchExperiences}/>} />
-          <Route path="/experiences/:slug" render={() => <ExperiencePage fetchExperiences={this._fetchExperiences}/>} />
-          <Route path="/contact" component={Contact} />
+          <Route
+            path="/"
+            exact
+            render={() => <div>Développeur front-end à Paris</div>}
+          />
+          <Route
+            path="/experiences"
+            exact
+            render={() => (
+              <ExperienceList fetchExperiences={this._fetchExperiences} />
+            )}
+          />
+          <Route
+            path="/experiences/:slug"
+            render={() => (
+              <ExperiencePage fetchExperiences={this._fetchExperiences} />
+            )}
+          />
+          <Route path="/Links" component={Links} />
         </div>
       </BrowserRouter>
     );
@@ -47,8 +62,9 @@ class App extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onExperiencesLoaded: (experiences) => dispatch({ type: 'ADD_EXPERIENCES', experiences })
+    onExperiencesLoaded: experiences =>
+      dispatch({ type: 'ADD_EXPERIENCES', experiences }),
   };
-}
+};
 
 export default connect(null, mapDispatchToProps)(App);
