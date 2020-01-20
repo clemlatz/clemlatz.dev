@@ -4,7 +4,7 @@ import './Links.css';
 
 export default () => (
   <div>
-    <ul class="links">
+    <ul className="links">
       <li>
         <a href="https://github.com/iwazaru">Github</a>
       </li>
