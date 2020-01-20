@@ -1,31 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 import Experience from '../Experience/Experience';
 
-class ExperienceList extends React.Component {
-  componentDidMount() {
-    if (this.props.experiences === null) {
-      this.props.fetchExperiences();
-    }
-  }
+import experiences from '../data/experiences';
 
-  render() {
-    let experiences = null;
-    if (this.props.experiences !== null) {
-      experiences = this.props.experiences.map(experience => {
-        return <Experience key={experience.slug} {...experience} />;
-      });
-    }
+export default function ExperienceList() {
+  const experienceList = experiences.map(experience => {
+    return <Experience key={experience.slug} {...experience} />;
+  });
 
-    return <div>{experiences}</div>;
-  }
+  return <div>{experienceList}</div>;
 }
-
-const mapStateToProps = state => {
-  return {
-    experiences: state.experiences,
-  };
-};
-
-export default connect(mapStateToProps)(ExperienceList);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 import './App.css';
 
@@ -60,11 +59,4 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onExperiencesLoaded: experiences =>
-      dispatch({ type: 'ADD_EXPERIENCES', experiences }),
-  };
-};
-
-export default connect(null, mapDispatchToProps)(App);
+export default App;
