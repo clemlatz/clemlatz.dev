@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <header>
       <h1 className="site-title">
-        <NavLink to="/">Clément Bourgoin</NavLink>
+        <NavLink ignoreLocale to="/">
+          Clément Bourgoin
+        </NavLink>
       </h1>
       <nav className="App-navigation">
         <ul>
