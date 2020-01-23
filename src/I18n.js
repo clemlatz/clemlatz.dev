@@ -7,15 +7,21 @@ const locales = ['en', 'fr'];
 // Dictionary of translations
 const translations = {
   en: {
-    'Front-end web developer based in Paris':
-      'Front-end web developer based in Paris',
+    'Book eater, cat lover, doting father, bedtime storyteller':
+      'Book eater, cat lover, doting father, bedtime storyteller',
+    'and also': 'and also',
+    'front-end web developer': 'front-end web developer',
+    'based in Paris': 'based in Paris',
     Career: 'Career',
     Links: 'Links',
     Today: 'Today',
   },
   fr: {
-    'Front-end web developer based in Paris':
-      'Développeur web front-end à Paris',
+    'Book eater, cat lover, doting father, bedtime storyteller':
+      'Dévoreur de livres, amateur de chat, papa poule, conteur du soir',
+    'and also': 'mais aussi',
+    'front-end web developer': 'développeur web front-end',
+    'based in Paris': 'à Paris',
     Career: 'Parcours',
     Links: 'Liens',
     Today: "Aujourd'hui",

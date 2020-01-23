@@ -14,35 +14,6 @@
   text-decoration: none;
 }
 
-.App .site-title {
-  font-size: 3em;
-  margin: .5em 0;
-}
-
-.App .site-title a {
-  border: 0;
-}
-
-.App-navigation ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  margin-bottom: 1em;
-  padding: 0;
-}
-
-.App-navigation li a {
-  font-size: 2em;
-  opacity: .5;
-  padding-right: .5em;
-  transition: opacity 250ms;
-}
-
-.App-navigation li a.active,
-.App-navigation li a:hover {
-  opacity: 1;
-}
-
-.App-navigation a {
-  border: 0;
+.App a:hover {
+  color: #f60;
 }
