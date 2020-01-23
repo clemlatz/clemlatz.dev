@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 import './App.css';
 
-import I18n from './I18n';
+import I18n from '../../I18n';
 
-import Career from './Career/Career';
-import ExperiencePage from './ExperiencePage/ExperiencePage';
-import Links from './Links/Links';
-import Header from './Header/Header';
+import Career from '../Career/Career';
+import ExperiencePage from '../ExperiencePage/ExperiencePage';
+import Links from '../Links/Links';
+import Header from '../Header/Header';
 
 // Match locales with regular expression containing each locale separated by `|`
 const base = '/:locale(en|fr)?';

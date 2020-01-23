@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 
 import Experience from '../Experience/Experience';
 
-import experiences from '../data/experiences';
+import experiences from '../../data/experiences';
 
 class ExperiencePage extends React.Component {
   render() {

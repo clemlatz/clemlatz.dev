@@ -2,7 +2,7 @@ import React from 'react';
 
 import Experience from '../Experience/Experience';
 
-import experiences from '../data/experiences';
+import experiences from '../../data/experiences';
 
 export default function ExperienceList() {
   const experienceList = experiences.map(experience => {

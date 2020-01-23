@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-i18n';
-import I18n from '../I18n';
+import I18n from '../../I18n';
 
 export default function Header() {
   return (
