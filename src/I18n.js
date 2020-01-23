@@ -11,12 +11,14 @@ const translations = {
       'Front-end web developer based in Paris',
     Career: 'Career',
     Links: 'Links',
+    Today: 'Today',
   },
   fr: {
     'Front-end web developer based in Paris':
       'Développeur web front-end à Paris',
     Career: 'Parcours',
     Links: 'Liens',
+    Today: "Aujourd'hui",
   },
 };
 

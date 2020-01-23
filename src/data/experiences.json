@@ -1,6 +1,9 @@
 [
   {
-    "jobTitle": "Développeur front-end",
+    "jobTitle": {
+      "en": "Front-end developper",
+      "fr": "Développeur front-end"
+    },
     "slug": "actialuna",
     "company": "Actialuna",
     "companyUrl": "https://www.actialuna.com",
@@ -8,7 +11,10 @@
     "tags": ["javascript", "css", "html", "ruby", "rails", "epub"]
   },
   {
-    "jobTitle": "Développeur web freelance",
+    "jobTitle": {
+      "en": "Freelance web developper",
+      "fr": "Développeur web freelance"
+    },
     "slug": "freelance",
     "company": "Biblys",
     "companyUrl": "https://www.biblys.fr/",
@@ -16,7 +22,10 @@
     "tags": ["php", "mysql", "html", "css", "javascript", "jquery"]
   },
   {
-    "jobTitle": "Responsable web & édition numérique",
+    "jobTitle": {
+      "en": "Web & digital publishing manager",
+      "fr": "Responsable web & édition numérique"
+    },
     "slug": "belial",
     "company": "Éditions Le Bélial'",
     "companyUrl": "https://www.belial.fr",
@@ -25,7 +34,10 @@
     "tags": ["epub", "onyx"]
   },
   {
-    "jobTitle": "Développeur web",
+    "jobTitle": {
+      "en": "Fullstack web developper",
+      "fr": "Développeur web full-stack"
+    },
     "slug": "draftquest",
     "company": "DraftQuest",
     "companyUrl": "https://www.draftquest.fr/",
@@ -34,7 +46,10 @@
     "tags": ["symfony", "php", "mysql", "html", "css", "javascript"]
   },
   {
-    "jobTitle": "Enseignant Master Métiers du livre",
+    "jobTitle": {
+      "en": "Book industry degree Teacher",
+      "fr": "Enseignant Master Métiers du livre"
+    },
     "slug": "upn",
     "company": "Université Paris-Nanterre",
     "companyUrl": "http://polemlivre.parisnanterre.fr/",
@@ -43,21 +58,30 @@
     "tags": ["html", "css", "wordpress", "epub"]
   },
   {
-    "jobTitle": "Gérant de librairie en ligne",
+    "jobTitle": {
+      "en": "Online bookshop manager",
+      "fr": "Gérant de librairie en ligne"
+    },
     "slug": "librys",
     "company": "Librairie Ys",
     "startYear": 2008,
     "endYear": 2013
   },
   {
-    "jobTitle": "Responsable BD & jeunesse",
+    "jobTitle": {
+      "en": "Comics & youth literature manager",
+      "fr": "Responsable BD & jeunesse"
+    },
     "slug": "contretemps",
     "company": "Librairie Contretemps",
     "startYear": 2007,
     "endYear": 2007
   },
   {
-    "jobTitle": "Apprenti-vendeur en librairie",
+    "jobTitle": {
+      "en": "Bookseller apprentice",
+      "fr": "Apprenti-vendeur en librairie"
+    },
     "slug": "fontaine",
     "company": "Librairies Fontaine",
     "companyUrl": "https://www.librairiesfontaine.com/",
