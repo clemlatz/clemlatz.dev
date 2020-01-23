@@ -11,7 +11,7 @@ export default function Header() {
       <nav className="App-navigation">
         <ul>
           <li>
-            <NavLink to="/experiences">
+            <NavLink to="/career">
               <I18n t="Career" />
             </NavLink>
           </li>

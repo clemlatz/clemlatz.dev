@@ -5,7 +5,7 @@ import './App.css';
 
 import I18n from './I18n';
 
-import ExperienceList from './ExperienceList/ExperienceList';
+import Career from './Career/Career';
 import ExperiencePage from './ExperiencePage/ExperiencePage';
 import Links from './Links/Links';
 import Header from './Header/Header';
@@ -29,9 +29,9 @@ export default function App() {
           exact
           render={() => <I18n t="Front-end web developer based in Paris" />}
         />
-        <Route path={`${base}/experiences`} exact component={ExperienceList} />
-        <Route path="/experiences/:slug" component={ExperiencePage} />
-        <Route path={`${base}/links`} component={Links} />
+        <Route path={`${base}/career`} exact component={Career} />
+        <Route path={`${base}/career/:slug`} component={ExperiencePage} />
+        <Route path={`${base}/links`} exact component={Links} />
       </div>
     </BrowserRouter>
   );

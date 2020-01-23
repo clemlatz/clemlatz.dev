@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-i18n';
 
 import './Experience.css';
 
@@ -40,7 +40,7 @@ export default function Experience(props) {
 
   return (
     <div className="Experience">
-      <Link key={props.slug} to={`/experiences/${props.slug}`}>
+      <Link key={props.slug} to={`/career/${props.slug}`}>
         <h2 className="title">{props.jobTitle}</h2>
       </Link>
       <span className="year">
