@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -31,10 +31,15 @@ export default function App() {
         <Route path={base} component={Header} />
 
         {/* Routes */}
-        <Route path={base} exact component={Home} />
-        <Route path={`${base}/career`} exact component={Career} />
-        <Route path={`${base}/career/:slug`} component={ExperiencePage} />
-        <Route path={`${base}/links`} exact component={Links} />
+        <Switch>
+          <Route path={base} exact component={Home} />
+          <Route path={`${base}/career`} exact component={Career} />
+          <Route path={`${base}/career/:slug`} component={ExperiencePage} />
+          <Route path={`${base}/links`} exact component={Links} />
+          <Route
+            render={() => <strong>404 · Page not found ¯\_(ツ)_/¯</strong>}
+          />
+        </Switch>
       </div>
     </BrowserRouter>
   );
