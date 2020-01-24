@@ -15,6 +15,7 @@ const translations = {
     Career: 'Career',
     Links: 'Links',
     Today: 'Today',
+    at: 'at',
   },
   fr: {
     'Book eater, cat lover, doting father, bedtime storyteller':
@@ -25,6 +26,7 @@ const translations = {
     Career: 'Parcours',
     Links: 'Liens',
     Today: "Aujourd'hui",
+    at: 'chez',
   },
 };
 

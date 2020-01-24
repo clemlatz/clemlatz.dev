@@ -43,6 +43,7 @@ export default withRouter(function Experience(props) {
     tags = <div className="tags">{tags}</div>;
   }
 
+  // Get localized job title using locale
   const jobTitle = props.jobTitle[locale];
 
   return (

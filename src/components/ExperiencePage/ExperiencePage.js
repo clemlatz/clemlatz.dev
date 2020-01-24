@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { withRouter } from 'react-router';
+import Helmet from 'react-helmet';
 
+import I18n from '../../I18n';
 import Experience from '../Experience/Experience';
-
 import experiences from '../../data/experiences';
 
-export default withRouter(function ExperiencePage(props) {
-  const { slug } = props.match.params;
+const t = I18n.getTranslation;
+
+export default withRouter(function ExperiencePage({ location, match }) {
+  const { slug, locale } = match.params;
+
+  // Get experience from experiences json file and slug
   const experience = experiences.find(experience => {
     return experience.slug === slug;
   });
 
-  return <Experience {...experience} />;
+  // Translate job title for page title
+  const jobTitle = experience.jobTitle[locale];
+  const pageTitle = `${jobTitle} ${t(location, 'at')} ${experience.company}`;
+
+  return (
+    <Fragment>
+      <Helmet>
+        <title>{pageTitle} · Clément Bourgoin</title>
+      </Helmet>
+      <Experience {...experience} />
+    </Fragment>
+  );
 });

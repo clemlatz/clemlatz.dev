@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import './App.css';
 
@@ -20,6 +21,12 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Clément Bourgoin</title>
+          <link rel="canonical" href="https://iwazaru.dev/" />
+        </Helmet>
+
         {/* Redirect root url to default locale */}
         <Route
           path="/"
