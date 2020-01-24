@@ -9,6 +9,7 @@ import ExperiencePage from '../ExperiencePage/ExperiencePage';
 import Links from '../Links/Links';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
+import Page404 from '../Page404/Page404';
 
 // Set default locale to english except if navigator languages contains 'fr'
 const frenchBrowser = navigator.languages.some(lang => lang.includes('fr'));
@@ -43,9 +44,7 @@ export default function App() {
           <Route path={`${base}/career`} exact component={Career} />
           <Route path={`${base}/career/:slug`} component={ExperiencePage} />
           <Route path={`${base}/links`} exact component={Links} />
-          <Route
-            render={() => <strong>404 · Page not found ¯\_(ツ)_/¯</strong>}
-          />
+          <Route component={Page404} />
         </Switch>
       </div>
     </BrowserRouter>
