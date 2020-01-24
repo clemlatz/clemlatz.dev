@@ -23,9 +23,7 @@ export default function App() {
     <BrowserRouter>
       <div className="App">
         <Helmet>
-          <meta charSet="utf-8" />
           <title>Clément Bourgoin</title>
-          <link rel="canonical" href="https://iwazaru.dev/" />
         </Helmet>
 
         {/* Redirect root url to default locale */}

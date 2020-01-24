@@ -16,6 +16,7 @@ const translations = {
     Links: 'Links',
     Today: 'Today',
     at: 'at',
+    'Page not found': 'Page not found',
   },
   fr: {
     'Book eater, cat lover, doting father, bedtime storyteller':
@@ -27,6 +28,7 @@ const translations = {
     Links: 'Liens',
     Today: "Aujourd'hui",
     at: 'chez',
+    'Page not found': 'Page introuvable',
   },
 };
 
