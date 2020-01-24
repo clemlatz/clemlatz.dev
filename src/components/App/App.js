@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import './App.css';
@@ -10,10 +10,7 @@ import Links from '../Links/Links';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import Page404 from '../Page404/Page404';
-
-// Set default locale to english except if navigator languages contains 'fr'
-const frenchBrowser = navigator.languages.some(lang => lang.includes('fr'));
-const defaultLocale = frenchBrowser ? 'fr' : 'en';
+import Root from '../Root/Root';
 
 // Match locales with regular expression containing each locale separated by `|`
 const base = '/:locale(en|fr)?';
@@ -27,11 +24,7 @@ export default function App() {
         </Helmet>
 
         {/* Redirect root url to default locale */}
-        <Route
-          path="/"
-          exact
-          render={() => <Redirect to={`/${defaultLocale}/`} />}
-        />
+        <Route path="/" exact component={Root} />
 
         {/* Add Header as a catch-all route to inject translations */}
         <Route path={base} component={Header} />
