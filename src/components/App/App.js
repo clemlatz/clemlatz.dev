@@ -13,7 +13,7 @@ import Page404 from '../Page404/Page404';
 import Root from '../Root/Root';
 
 // Match locales with regular expression containing each locale separated by `|`
-const base = '/:locale(en|fr)?';
+const base = '/:locale(en|fr)+';
 
 export default function App() {
   return (
