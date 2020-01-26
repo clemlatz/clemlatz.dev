@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import './App.css';
@@ -10,7 +10,6 @@ import Links from '../Links/Links';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import Page404 from '../Page404/Page404';
-import Root from '../Root/Root';
 
 // Match locales with regular expression containing each locale separated by `|`
 const base = '/:locale(en|fr)+';
@@ -24,7 +23,7 @@ export default function App() {
         </Helmet>
 
         {/* Redirect root url to default locale */}
-        <Route path="/" exact component={Root} />
+        <Route path="/" exact render={() => <Redirect to={`/en/`} />} />
 
         {/* Add Header as a catch-all route to inject translations */}
         <Route path={base} component={Header} />

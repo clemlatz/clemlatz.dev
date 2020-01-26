@@ -5,5 +5,8 @@ https://www.iwazaru.dev/* https://iwazaru.dev/:splat 301!
 https://xn--clment-cva.dev/* https://iwazaru.dev/:splat 301!
 https://iwazaru.netlify.com/* https://iwazaru.dev/:splat 301!
 
+# Redirect root url to default locale
+/        /en/           302
+
 # React router catch-all
-/*    /index.html   200
+/*       /index.html    200
