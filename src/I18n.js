@@ -12,6 +12,8 @@ const translations = {
     'and also': 'and also',
     'front-end web developer': 'front-end web developer',
     'based in Paris': 'based in Paris',
+    HomeMeta:
+      'Book eater, cat lover, doting father, bedtime storyteller and also front-end web developer based in Paris',
     Career: 'Career',
     Links: 'Links',
     Today: 'Today',
@@ -24,6 +26,8 @@ const translations = {
     'and also': 'mais aussi',
     'front-end web developer': 'développeur web front-end',
     'based in Paris': 'à Paris',
+    HomeMeta:
+      'Dévoreur de livres, amateur de chat, papa poule, conteur du soir and also front-end web developer based in Paris',
     Career: 'Parcours',
     Links: 'Liens',
     Today: "Aujourd'hui",

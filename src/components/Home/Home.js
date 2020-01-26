@@ -13,6 +13,10 @@ export default function Home({ location }) {
           Clément Bourgoin ·{' '}
           {`${I18n.getTranslation(location, 'front-end web developer')}`}
         </title>
+        <meta
+          name="description"
+          content={`${I18n.getTranslation(location, 'HomeMeta')}`}
+        />
       </Helmet>
       <p>
         <NavLink to="/en/">en</NavLink> · <NavLink to="/fr/">fr</NavLink>
