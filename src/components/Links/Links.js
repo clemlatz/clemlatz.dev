@@ -6,6 +6,21 @@ import I18n from '../../I18n';
 import './Links.css';
 
 export default function Links({ location }) {
+  const links = {
+    Github: 'https://github.com/iwazaru',
+    'Linked in': 'https://www.linkedin.com/in/clement-bourgoin/',
+    Medium: 'https://medium.com/@iwazaru',
+    StackOverflow: 'https://stackoverflow.com/users/1053818/iwazaru',
+    Twitter: 'https://twitter.com/ClementBourgoin',
+  };
+  const list = Object.entries(links).map(([title, url]) => (
+    <li key={url}>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {title}
+      </a>
+    </li>
+  ));
+
   return (
     <div>
       <Helmet>
@@ -13,25 +28,7 @@ export default function Links({ location }) {
           {`${I18n.getTranslation(location, 'Links')}`} · Clément Bourgoin
         </title>
       </Helmet>
-      <ul className="links">
-        <li>
-          <a href="https://github.com/iwazaru">Github</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/clement-bourgoin/">Linked In</a>
-        </li>
-        <li>
-          <a href="https://medium.com/@iwazaru">Medium</a>
-        </li>
-        <li>
-          <a href="https://stackoverflow.com/users/1053818/iwazaru">
-            StackOverflow
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/ClementBourgoin">Twitter</a>
-        </li>
-      </ul>
+      <ul className="links">{list}</ul>
     </div>
   );
 }
