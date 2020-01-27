@@ -19,7 +19,13 @@ export default function Home({ location }) {
         />
       </Helmet>
       <p>
-        <NavLink to="/en/">en</NavLink> · <NavLink to="/fr/">fr</NavLink>
+        <NavLink hrefLang="en" to="/en/">
+          en
+        </NavLink>{' '}
+        ·{' '}
+        <NavLink hrefLang="fr" to="/fr/">
+          fr
+        </NavLink>
       </p>
     </div>
   );
