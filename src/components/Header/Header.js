@@ -1,13 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-i18n';
+import Helmet from 'react-helmet';
 
 import I18n from '../../I18n';
 
 import './Header.css';
 
-export default function Header() {
+export default function Header({ match }) {
   return (
     <header className="Header">
+      <Helmet htmlAttributes={{ lang: match.params.locale }}></Helmet>
       <h1 className="title">
         <NavLink to="/">Clément Bourgoin</NavLink>
       </h1>
