@@ -38,4 +38,5 @@ const translations = {
 
 const I18n = createI18n(locales, translations);
 
+export { locales };
 export default I18n;

@@ -4,11 +4,12 @@ import { Helmet } from 'react-helmet';
 
 import './App.css';
 
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import Career from '../Career/Career';
+import Home from '../Home/Home';
 import ExperiencePage from '../ExperiencePage/ExperiencePage';
 import Links from '../Links/Links';
-import Header from '../Header/Header';
-import Home from '../Home/Home';
 import Page404 from '../Page404/Page404';
 
 // Match locales with regular expression containing each locale separated by `|`
@@ -36,6 +37,9 @@ export default function App() {
           <Route path={`${base}/links`} exact component={Links} />
           <Route component={Page404} />
         </Switch>
+
+        {/* Add Footer as a catch-all route to inject translations */}
+        <Route path={base} component={Footer} />
       </div>
     </BrowserRouter>
   );
