@@ -12,8 +12,10 @@ import ExperiencePage from '../ExperiencePage/ExperiencePage';
 import Links from '../Links/Links';
 import Page404 from '../Page404/Page404';
 
+import { locales } from '../../I18n';
+
 // Match locales with regular expression containing each locale separated by `|`
-const base = '/:locale(en|fr)+';
+const base = `/:locale(${locales.join('|')})+`;
 
 export default function App() {
   return (
