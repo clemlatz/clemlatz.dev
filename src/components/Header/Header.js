@@ -28,13 +28,15 @@ export default function Header({ location, match }) {
         <NavLink to="/">Clément Bourgoin</NavLink>
       </h1>
       <p className="tagline">
-        <I18n t="Book eater, cat lover, doting father, bedtime storyteller" />
-        <br />
-        <I18n t="and also" />{' '}
-        <strong>
-          <I18n t="front-end web developer" />
-        </strong>{' '}
-        <I18n t="based in Paris" />
+        a.k.a.{' '}
+        <a
+          href="https://github.com/iwazaru"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          iwazaru
+        </a>{' '}
+        · <I18n t="front-end web developer" />
       </p>
       <nav className="navigation">
         <ul>
