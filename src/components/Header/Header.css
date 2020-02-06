@@ -1,8 +1,3 @@
-.Header {
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-}
-
 .Header .title {
   font-size: 3em;
   margin: 0.5em 0 0;
@@ -17,8 +12,8 @@
 }
 
 .Header .navigation ul {
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   display: flex;
   font-size: 1.25em;
   list-style: none;
@@ -30,8 +25,12 @@
   margin-right: 0.25em;
 }
 
+.Header .navigation li:first-child {
+  margin-left: 0.25em;
+}
+
 .Header .navigation li::after {
-  content: "·";
+  content: '·';
   margin-left: 0.25em;
 }
 

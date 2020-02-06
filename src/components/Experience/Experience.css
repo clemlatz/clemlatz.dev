@@ -1,5 +1,5 @@
 .Experience {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .Experience .title {
@@ -7,7 +7,7 @@
 }
 
 .Experience .year {
-  opacity: .75;
+  opacity: 0.75;
   padding-right: 15px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .Experience .tag {
-  font-size: .9em;
-  opacity: .6;
+  font-size: 0.9em;
+  opacity: 0.6;
   padding-right: 5px;
 }
