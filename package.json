@@ -12,6 +12,9 @@
     "sitemap": "^5.1.0"
   },
   "devDependencies": {
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "^1.19.1",
     "react-scripts": "3.3.0"
   },
   "scripts": {
@@ -27,5 +30,13 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
 }
