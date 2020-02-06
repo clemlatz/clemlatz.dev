@@ -17,24 +17,38 @@
 }
 
 .Header .navigation ul {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   display: flex;
+  font-size: 1.25em;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 5px 0;
+}
+
+.Header .navigation li {
+  margin-right: 0.25em;
+}
+
+.Header .navigation li::after {
+  content: "·";
+  margin-left: 0.25em;
+}
+
+.Header .navigation li:last-child::after {
+  display: none;
 }
 
 .Header .navigation li a {
-  border-bottom: 1px dashed black;
-  font-size: 2em;
+  /* border-bottom: 1px dashed black; */
   opacity: 0.5;
-  margin-right: 0.25em;
   transition: opacity 250ms;
 }
 
 .Header .navigation li a.active,
 .Header .navigation li a:hover {
   color: black;
-  border-style: solid;
+  /* border-style: solid; */
   opacity: 1;
 }
 
