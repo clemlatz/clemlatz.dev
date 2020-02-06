@@ -14,7 +14,7 @@ export default function Header({ location, match }) {
     <link
       key={locale}
       rel="alternate"
-      hreflang={locale}
+      hrefLang={locale}
       href={`${window.location.origin}/${locale}/${route}`}
     />
   ));

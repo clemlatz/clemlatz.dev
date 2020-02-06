@@ -26,7 +26,7 @@ export default function App() {
         </Helmet>
 
         {/* Redirect root url to default locale */}
-        <Route path="/" exact render={() => <Redirect to={`/en/`} />} />
+        <Route path="/" exact render={() => <Redirect to={'/en/'} />} />
 
         {/* Add Header as a catch-all route to inject translations */}
         <Route path={base} component={Header} />

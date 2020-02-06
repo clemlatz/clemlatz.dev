@@ -12,6 +12,9 @@
     "sitemap": "^5.1.0"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "husky": ">=4",
     "lint-staged": ">=10",
     "prettier": "^1.19.1",
@@ -23,7 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "map": "node ./mapsite.js"
+    "map": "node ./mapsite.js",
+    "lint": "eslint ./src"
   },
   "browserslist": [
     ">0.2%",
