@@ -28,6 +28,12 @@ const translations = {
     Today: 'Today',
     at: 'at',
     'Page not found': 'Page not found',
+    /* Contact form */
+    'Your name:': 'Your name:',
+    'Your email address:': 'Your email address:',
+    'Subject:': 'Subject:',
+    'Message:': 'Message:',
+    Submit: 'Submit',
   },
   fr: {
     'book eater': 'dévoreur de livres',
@@ -51,6 +57,12 @@ const translations = {
     Today: "Aujourd'hui",
     at: 'chez',
     'Page not found': 'Page introuvable',
+    /* Contact form */
+    'Your name:': 'Votre nom :',
+    'Your email address:': 'Votre adresse e-mail :',
+    'Subject:': 'Sujet: ',
+    'Message:': 'Message :',
+    Submit: 'Envoyer',
   },
 };
 

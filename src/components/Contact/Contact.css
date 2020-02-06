@@ -1,0 +1,46 @@
+.Contact {
+  margin: auto;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+.Contact .field {
+  margin-top: 15px;
+}
+
+.Contact .field label,
+.Contact .field input,
+.Contact .field textarea {
+  box-sizing: border-box;
+  display: block;
+  font-size: 1em;
+  width: 100%;
+}
+
+.Contact .field input,
+.Contact .field textarea {
+  border: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.Contact .field input:focus,
+.Contact .field textarea:focus {
+  border-color: grey;
+}
+
+.Contact .field label {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.Contact .submit-button {
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  color: white;
+  font-size: 1em;
+  margin: auto;
+  padding: 5px 10px;
+}
