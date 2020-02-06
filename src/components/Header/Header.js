@@ -50,6 +50,11 @@ export default function Header({ location, match }) {
               <I18n t="Links" />
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/contact">
+              <I18n t="Contact" />
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

@@ -6,10 +6,12 @@ import './App.css';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Career from '../Career/Career';
+
 import Home from '../Home/Home';
+import Career from '../Career/Career';
 import ExperiencePage from '../ExperiencePage/ExperiencePage';
 import Links from '../Links/Links';
+import Contact from '../Contact/Contact';
 import Page404 from '../Page404/Page404';
 
 import { locales } from '../../I18n';
@@ -37,6 +39,7 @@ export default function App() {
           <Route path={`${base}/career`} exact component={Career} />
           <Route path={`${base}/career/:slug`} component={ExperiencePage} />
           <Route path={`${base}/links`} exact component={Links} />
+          <Route path={`${base}/contact`} exact component={Contact} />
           <Route component={Page404} />
         </Switch>
 
