@@ -1,4 +1,5 @@
 const qs = require('querystring');
+const validator = require('validator');
 const nodemailer = require('nodemailer');
 
 // Get SMTP credentials + contact email from env vars
@@ -23,6 +24,31 @@ exports.handler = async event => {
     // We can get the POST body in the event argument passed to this function
     // and parse it with the querystring module to get our form field values
     const { name, email, subject, message } = qs.parse(event.body);
+
+    // User input validation
+    try {
+      // Check that all fields are filled and are string
+      Object.entries({ name, email, subject, message }).forEach(
+        ([field, value]) => {
+          if (typeof value !== 'string') {
+            throw new Error(`${field} is a required field`);
+          }
+
+          // Ignore whitespace so that fields with only whitespace are
+          // considered empty
+          if (validator.isEmpty(value, { ignore_whitespace: true })) {
+            throw new Error(`${field} is a required field`);
+          }
+        }
+      );
+
+      // Check that email field value is an email
+      if (!validator.isEmail(email)) {
+        throw new Error('email must be a valid email address');
+      }
+    } catch (error) {
+      return { statusCode: 522, body: error.message };
+    }
 
     // We use a connection url to pass all credentials at once
     // i.e. smtps://username:password@smtp.example.com/?pool=true

@@ -28,8 +28,7 @@ export default function Contact({ location }) {
       {/* If an error message is set, we display it above form */}
       {error && (
         <p className="error">
-          <I18n t="An error occured:" />
-          {error}
+          <I18n t="An error occured:" /> {error}
         </p>
       )}
 
