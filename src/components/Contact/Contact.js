@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import I18n from '../../I18n';
+import onSubmit from '../../lib/on-submit';
 
 import './Contact.css';
 
@@ -13,7 +14,7 @@ export default function Contact({ location }) {
           {`${I18n.getTranslation(location, 'ContactVerb')}`} Clément Bourgoin
         </title>
       </Helmet>
-      <form className="Contact">
+      <form className="Contact" onSubmit={onSubmit}>
         <div className="field">
           <label htmlFor="name">
             <I18n t="Your name:" />
