@@ -1,7 +1,7 @@
 .Contact {
   margin: auto;
   max-width: 600px;
-  padding: 0 10px;
+  padding: 10px 25px;
 }
 
 .Contact .field {
@@ -43,4 +43,16 @@
   font-size: 1em;
   margin: auto;
   padding: 5px 10px;
+}
+
+.Contact .submit-button:disabled {
+  opacity: 0.5;
+}
+
+.Contact .success {
+  color: #28a745;
+}
+
+.Contact .error {
+  color: #dc3545;
 }

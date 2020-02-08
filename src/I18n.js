@@ -33,7 +33,10 @@ const translations = {
     'Your email address:': 'Your email address:',
     'Subject:': 'Subject:',
     'Message:': 'Message:',
+    'An error occured:': 'An error occured:',
+    'Your message was sent!': 'Your message was sent!',
     Submit: 'Submit',
+    'Sending…': 'Sending…',
   },
   fr: {
     'book eater': 'dévoreur de livres',
@@ -62,7 +65,10 @@ const translations = {
     'Your email address:': 'Votre adresse e-mail :',
     'Subject:': 'Sujet: ',
     'Message:': 'Message :',
+    'An error occured:': 'Une erreur est survenue :',
+    'Your message was sent!': 'Votre message a bien été envoyé !',
     Submit: 'Envoyer',
+    'Sending…': 'Envoi…',
   },
 };
 
