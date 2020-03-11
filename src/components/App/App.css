@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .App {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   margin: auto;
   padding: 15px;
@@ -16,4 +16,17 @@
 
 .App a:hover {
   color: #f60;
+}
+
+.App a.button {
+  background: #f60;
+  border: 1px solid #f60;
+  border-radius: 5px;
+  color: white;
+  opacity: 0.9;
+  padding: 5px 10px;
+}
+
+.App a.button:hover {
+  opacity: 1;
 }
