@@ -14,11 +14,9 @@ const translations = {
     'and also': 'and also',
     'front-end web developer': 'front-end web developer',
     'based in Paris': 'based in Paris',
-    Currently: 'Currently',
-    not: 'not',
-    "looking for a job, but let's": "looking for a job, but let's",
-    'keep in touch': 'keep in touch',
-    '!': '!',
+    'Currently looking for a job:': 'Currently looking for a job:',
+    'learn more about me and my dream job on Linked In!':
+      'learn more about me and my dream job on Linked In!',
     HomeMeta:
       'Book eater, cat lover, doting father, bedtime storyteller and also front-end web developer based in Paris',
     Career: 'Career',
@@ -48,11 +46,9 @@ const translations = {
     'and also': 'mais aussi',
     'front-end web developer': 'développeur web front-end',
     'based in Paris': 'à Paris',
-    Currently: 'Actuellement',
-    not: 'pas',
-    "looking for a job, but let's": "en recherche d'emploi, mais",
-    'keep in touch': 'restons en contact',
-    '!': ' !',
+    'Currently looking for a job:': "Actuellement en recherche d'emploi :",
+    'learn more about me and my dream job on Linked In!':
+      'apprenez-en plus à propos moi sur Linked In !',
     HomeMeta:
       'Dévoreur de livres, amateur de chat, papa poule, conteur du soir and also front-end web developer based in Paris',
     Career: 'Parcours',
