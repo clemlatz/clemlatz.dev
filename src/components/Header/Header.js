@@ -36,7 +36,14 @@ export default function Header({ location, match }) {
         >
           iwazaru
         </a>{' '}
-        · <I18n t="front-end web developer" />
+        · <I18n t="front-end web developer" /> ·{' '}
+        <a
+          href="https://www.linkedin.com/in/clement-bourgoin/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          #OpenToWork
+        </a>
       </p>
       <nav className="navigation">
         <ul>
