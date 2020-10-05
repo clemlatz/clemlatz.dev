@@ -33,7 +33,9 @@ export default function Home({ location }) {
           <I18n t="based in Paris" />.<br />
         </p>
         <p>
-          <I18n t="Currently looking for a job:" />
+          <strong>
+            <I18n t="Currently looking for a job:" />
+          </strong>
           <br />
           <a
             href="https://www.linkedin.com/in/clement-bourgoin/"
