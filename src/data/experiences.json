@@ -1,14 +1,14 @@
 [
   {
     "jobTitle": {
-      "en": "Front-end developper",
-      "fr": "Développeur front-end"
+      "en": "Fullstack web developper",
+      "fr": "Développeur web fullstack"
     },
-    "slug": "actialuna",
-    "company": "Actialuna",
-    "companyUrl": "https://www.actialuna.com",
-    "startYear": 2015,
-    "tags": ["react", "typescript", "es2015+", "css", "html", "epub"]
+    "slug": "pix",
+    "company": "Pix",
+    "companyUrl": "https://www.pix.fr/",
+    "startYear": 2021,
+    "tags": ["node", "ember"]
   },
   {
     "jobTitle": {
@@ -18,8 +18,20 @@
     "slug": "freelance",
     "company": "Biblys",
     "companyUrl": "https://www.biblys.fr/",
-    "startYear": 2009,
+    "startYear": 2008,
     "tags": ["php", "mysql", "html", "css", "javascript", "jquery"]
+  },
+  {
+    "jobTitle": {
+      "en": "Front-end developper",
+      "fr": "Développeur front-end"
+    },
+    "slug": "actialuna",
+    "company": "Actialuna",
+    "companyUrl": "https://www.actialuna.com",
+    "startYear": 2015,
+    "endYear": 2020,
+    "tags": ["react", "typescript", "es2015+", "css", "html", "epub"]
   },
   {
     "jobTitle": {
