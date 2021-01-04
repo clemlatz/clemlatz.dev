@@ -36,7 +36,7 @@ export default function Header({ location, match }) {
         >
           iwazaru
         </a>{' '}
-        · <I18n t="front-end web developer" />
+        · <I18n t="web developer" />
       </p>
       <nav className="navigation">
         <ul>

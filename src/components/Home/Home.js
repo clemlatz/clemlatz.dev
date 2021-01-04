@@ -9,7 +9,7 @@ export default function Home({ location }) {
       <Helmet>
         <title>
           Clément Bourgoin ·{' '}
-          {`${I18n.getTranslation(location, 'front-end web developer')}`}
+          {`${I18n.getTranslation(location, 'web developer')}`}
         </title>
         <meta
           name="description"
@@ -28,7 +28,7 @@ export default function Home({ location }) {
           <br />
           <I18n t="and also" />{' '}
           <strong>
-            <I18n t="front-end web developer" />
+            <I18n t="web developer" />
           </strong>{' '}
           <I18n t="based in Paris" />.<br />
         </p>
