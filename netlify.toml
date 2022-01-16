@@ -1,5 +1,0 @@
-[build]
-  functions = "./functions" # where our functions are stored
-
-[dev]
-  autoLaunch = false
