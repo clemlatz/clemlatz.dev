@@ -1,0 +1,14 @@
+.container {
+  padding: 16px;
+  margin: 32px auto;
+  max-width: 480px;
+}
+
+.title {
+  font-size: 5rem;
+  margin: 0.5em 0 0;
+}
+
+.title a {
+  border: 0;
+}
