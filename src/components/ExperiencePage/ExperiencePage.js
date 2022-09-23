@@ -23,7 +23,7 @@ export default withRouter(function ExperiencePage({ location, match }) {
   return (
     <Fragment>
       <Helmet>
-        <title>{pageTitle} · Clément Bourgoin</title>
+        <title>{pageTitle} · Clément Latzarus</title>
       </Helmet>
       <Experience {...experience} />
     </Fragment>

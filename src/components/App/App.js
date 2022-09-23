@@ -24,7 +24,7 @@ export default function App() {
     <BrowserRouter>
       <div className="App">
         <Helmet>
-          <title>Clément Bourgoin</title>
+          <title>Clément Latzarus</title>
         </Helmet>
 
         {/* Redirect root url to default locale */}

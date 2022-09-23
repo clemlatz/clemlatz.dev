@@ -8,7 +8,7 @@ export default function Home({ location }) {
     <Fragment>
       <Helmet>
         <title>
-          Clément Bourgoin ·{' '}
+          Clément Latzarus ·{' '}
           {`${I18n.getTranslation(location, 'web developer')}`}
         </title>
         <meta

@@ -21,7 +21,7 @@ export default function Contact({ location }) {
     <div className="Contact">
       <Helmet>
         <title>
-          {`${I18n.getTranslation(location, 'ContactVerb')}`} Clément Bourgoin
+          {`${I18n.getTranslation(location, 'ContactVerb')}`} Clément Latzarus
         </title>
       </Helmet>
 

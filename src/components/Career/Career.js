@@ -18,7 +18,7 @@ export default function Career({ location }) {
     <Fragment>
       <Helmet>
         <title>
-          {`${I18n.getTranslation(location, 'Career')}`} · Clément Bourgoin
+          {`${I18n.getTranslation(location, 'Career')}`} · Clément Latzarus
         </title>
       </Helmet>
       <div className="Career">

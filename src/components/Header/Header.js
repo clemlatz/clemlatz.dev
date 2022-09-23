@@ -25,7 +25,7 @@ export default function Header({ location, match }) {
         {alternates}
       </Helmet>
       <h1 className="title">
-        <NavLink to="/">Clément Bourgoin</NavLink>
+        <NavLink to="/">Clément Latzarus</NavLink>
       </h1>
       <p className="tagline">
         a.k.a.{' '}

@@ -11,7 +11,7 @@ export default function Links({ location }) {
     'Linked in': 'https://www.linkedin.com/in/clement-bourgoin/',
     Medium: 'https://medium.com/@iwazaru',
     StackOverflow: 'https://stackoverflow.com/users/1053818/iwazaru',
-    Twitter: 'https://twitter.com/ClementBourgoin',
+    Twitter: 'https://twitter.com/clemlatz',
   };
   const list = Object.entries(links).map(([title, url]) => (
     <li key={url}>
@@ -25,7 +25,7 @@ export default function Links({ location }) {
     <div>
       <Helmet>
         <title>
-          {`${I18n.getTranslation(location, 'Links')}`} · Clément Bourgoin
+          {`${I18n.getTranslation(location, 'Links')}`} · Clément Latzarus
         </title>
       </Helmet>
       <ul className="links">{list}</ul>
