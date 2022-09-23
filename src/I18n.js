@@ -7,6 +7,7 @@ const locales = ['en', 'fr'];
 // Dictionary of translations
 const translations = {
   en: {
+    formerly: 'formerly',
     'book eater': 'book eater',
     'cat lover': 'cat lover',
     'doting father': 'doting father',
@@ -41,6 +42,7 @@ const translations = {
     'Sending…': 'Sending…',
   },
   fr: {
+    formerly: 'ex',
     'book eater': 'dévoreur de livres',
     'cat lover': 'amateur de chat',
     'doting father': 'papa poule',

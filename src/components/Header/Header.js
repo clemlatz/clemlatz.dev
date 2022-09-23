@@ -28,7 +28,7 @@ export default function Header({ location, match }) {
         <NavLink to="/">Clément Latzarus</NavLink>
       </h1>
       <p className="tagline">
-        a.k.a.{' '}
+        (<I18n t="formerly" /> &quot;Clément Bourgoin&quot;) · a.k.a.{' '}
         <a
           href="https://github.com/iwazaru"
           target="_blank"
