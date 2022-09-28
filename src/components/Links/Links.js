@@ -8,9 +8,9 @@ import './Links.css';
 export default function Links({ location }) {
   const links = {
     Github: 'https://github.com/clemlatz',
-    'Linked in': 'https://www.linkedin.com/in/clement-bourgoin/',
-    Medium: 'https://medium.com/@iwazaru',
-    StackOverflow: 'https://stackoverflow.com/users/1053818/iwazaru',
+    'Linked in': 'https://www.linkedin.com/in/clemlatz/',
+    Medium: 'https://medium.com/@clemlatz',
+    StackOverflow: 'https://stackoverflow.com/users/1053818/clemlatz',
     Twitter: 'https://twitter.com/clemlatz',
   };
   const list = Object.entries(links).map(([title, url]) => (
