@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const experiences = require('./src/data/experiences.json');
 
 // Creates a sitemap object given the input configuration with URLs
-const sitemap = new SitemapStream({ hostname: 'https://iwazaru.dev' });
+const sitemap = new SitemapStream({ hostname: 'https://clemlatz.dev' });
 
 const locales = ['en', 'fr'];
 

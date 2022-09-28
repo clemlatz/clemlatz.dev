@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iwazaru.dev/sitemap.xml
+Sitemap: https://clemlatz.dev/sitemap.xml

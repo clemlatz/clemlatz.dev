@@ -1,9 +1,11 @@
 # Redirect domain aliases to primary domain
-https://www.iwazaru.fr/* https://iwazaru.dev/:splat 301!
-https://iwazaru.fr/* https://iwazaru.dev/:splat 301!
-https://www.iwazaru.dev/* https://iwazaru.dev/:splat 301!
-https://xn--clment-cva.dev/* https://iwazaru.dev/:splat 301!
-https://iwazaru.netlify.com/* https://iwazaru.dev/:splat 301!
+https://www.iwazaru.fr/* https://clemlatz.dev/:splat 301!
+https://iwazaru.fr/* https://clemlatz.dev/:splat 301!
+https://www.iwazaru.dev/* https://clemlatz.dev/:splat 301!
+https://iwazaru.dev/* https://clemlatz.dev/:splat 301!
+https://xn--clment-cva.dev/* https://clemlatz.dev/:splat 301!
+https://iwazaru.netlify.com/* https://clemlatz.dev/:splat 301!
+https://clemlatz.netlify.app/* https://clemlatz.dev/:splat 301!
 
 # Redirect root url to default locale
 /        /en/           302!
