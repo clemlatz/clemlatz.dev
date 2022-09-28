@@ -39,7 +39,7 @@ export default function Home({ location }) {
           </strong>{' '}
           <I18n t="looking for a job, but let's" />{' '}
           <a
-            href="https://www.linkedin.com/in/clement-bourgoin/"
+            href="https://www.linkedin.com/in/clemlatz/"
             target="_blank"
             rel="noopener noreferrer"
           >
