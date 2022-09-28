@@ -7,7 +7,7 @@ import './Links.css';
 
 export default function Links({ location }) {
   const links = {
-    Github: 'https://github.com/iwazaru',
+    Github: 'https://github.com/clemlatz',
     'Linked in': 'https://www.linkedin.com/in/clement-bourgoin/',
     Medium: 'https://medium.com/@iwazaru',
     StackOverflow: 'https://stackoverflow.com/users/1053818/iwazaru',
