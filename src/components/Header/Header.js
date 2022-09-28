@@ -30,11 +30,11 @@ export default function Header({ location, match }) {
       <p className="tagline">
         (<I18n t="formerly" /> &quot;Clément Bourgoin&quot;) · a.k.a.{' '}
         <a
-          href="https://github.com/iwazaru"
+          href="https://github.com/clemlatz"
           target="_blank"
           rel="noopener noreferrer"
         >
-          iwazaru
+          clemlatz
         </a>{' '}
         · <I18n t="web developer" />
       </p>
