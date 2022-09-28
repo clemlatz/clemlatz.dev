@@ -30,7 +30,7 @@ const translations = {
     at: 'at',
     'Page not found': 'Page not found',
     'Download PDF resume': 'Download my PDF resume (french)',
-    'resume-file-name': 'clement-bourgoin_front-end-dev_resume.pdf',
+    'resume-file-name': 'clement-latzarus_front-end-dev_resume.pdf',
     /* Contact form */
     'Your name:': 'Your name:',
     'Your email address:': 'Your email address:',
@@ -65,7 +65,7 @@ const translations = {
     at: 'chez',
     'Page not found': 'Page introuvable',
     'Download PDF resume': 'Télécharger mon CV en PDF',
-    'resume-file-name': 'cv_clement-bourgoin_dev-front-end.pdf',
+    'resume-file-name': 'cv_clement-latzarus_dev-front-end.pdf',
     /* Contact form */
     'Your name:': 'Votre nom :',
     'Your email address:': 'Votre adresse e-mail :',
