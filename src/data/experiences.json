@@ -1,14 +1,14 @@
 [
   {
     "jobTitle": {
-      "en": "Fullstack web developper & Manager",
-      "fr": "Développeur web fullstack & Manager"
+      "en": "Lead web developer & Manager",
+      "fr": "Lead web developer & Manager"
     },
     "slug": "pix",
     "company": "Pix",
     "companyUrl": "https://www.pix.fr/",
     "startYear": 2021,
-    "tags": ["node", "ember"]
+    "tags": ["node", "ember", "clean-code", "clean-archi", "domain-driven-design"]
   },
   {
     "jobTitle": {
