@@ -16,7 +16,7 @@ export default function Links({ location }) {
   };
   const list = Object.entries(links).map(([title, url]) => (
     <li key={url}>
-      <a href={url} rel="me" target="_blank" rel="noopener noreferrer">
+      <a href={url} target="_blank" rel="me noopener noreferrer">
         {title}
       </a>
     </li>
