@@ -7,6 +7,7 @@ import './Links.css';
 
 export default function Links({ location }) {
   const links = {
+    Bluesky: 'https://bsky.app/profile/clemlatz.dev',
     Mastodon: 'https://mastodon.social/@clemlatz',
     Github: 'https://github.com/clemlatz',
     'Linked in': 'https://www.linkedin.com/in/clemlatz/',
