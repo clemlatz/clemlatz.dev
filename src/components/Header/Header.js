@@ -41,6 +41,9 @@ export default function Header({ location, match }) {
       <nav className="navigation">
         <ul>
           <li>
+            <a href="https://blog.clemlatz.dev">Blog</a>
+          </li>
+          <li>
             <NavLink to="/career">
               <I18n t="Career" />
             </NavLink>
