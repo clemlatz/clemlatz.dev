@@ -1,6 +1,6 @@
 // Sends a request to our lambda function
 // Called when the form is submitted
-export default async function onSubmit(
+export default async function handleContactFormSubmit(
   event,
   setSuccess,
   setError,
@@ -15,9 +15,12 @@ export default async function onSubmit(
 
     // We use fetch to POST to the server, sending the form fields values
     // as the body and wait for the response
-    const response = await fetch('/send', {
-      method: 'post',
-      body: new URLSearchParams(new FormData(event.target)),
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
     });
 
     // We set loading to false now that the server has responded

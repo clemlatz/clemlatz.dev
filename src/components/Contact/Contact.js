@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import Helmet from 'react-helmet';
 
 import I18n from '../../I18n';
-import onSubmit from '../../lib/on-submit';
 
 import './Contact.css';
+import handleContactFormSubmit from '../../lib/handle-contact-form-submit';
 
 export default function Contact({ location }) {
   /*
    We initiate our state, create hooks, and set default values
    - loading (boolean): is the form currently being sent? (default: false)
-   - success (boolean): has the form been successfuly sent? (default: false)
-   - error (string): contains a message if an error occured (default: null)
+   - success (boolean): has the form been successfully sent? (default: false)
+   - error (string): contains a message if an error occurred (default: null)
  */
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -40,8 +40,16 @@ export default function Contact({ location }) {
         </p>
       ) : (
         <form
+          name="contact"
+          data-netlify="true"
           onSubmit={event =>
-            onSubmit(event, setSuccess, setError, setLoading, location)
+            handleContactFormSubmit(
+              event,
+              setSuccess,
+              setError,
+              setLoading,
+              location
+            )
           }
         >
           <div className="field">
