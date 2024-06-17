@@ -5,7 +5,6 @@ import Experience from '../Experience/Experience';
 import experiences from '../../data/experiences';
 
 import I18n from '../../I18n';
-import resume from '../../data/resume-fr.pdf';
 
 import './Career.css';
 
@@ -21,16 +20,7 @@ export default function Career({ location }) {
           {`${I18n.getTranslation(location, 'Career')}`} · Clément Latzarus
         </title>
       </Helmet>
-      <div className="Career">
-        <a
-          href={resume}
-          className="button"
-          download={`${I18n.getTranslation(location, 'resume-file-name')}`}
-        >
-          ⬇ <I18n t="Download PDF resume" />
-        </a>
-        {experienceList}
-      </div>
+      <div className="Career">{experienceList}</div>
     </Fragment>
   );
 }
