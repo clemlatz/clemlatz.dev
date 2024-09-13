@@ -14,7 +14,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jest": "^28.0.0",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": ">=4",
     "lint-staged": ">=10",
