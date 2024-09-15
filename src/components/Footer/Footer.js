@@ -9,7 +9,7 @@ import './Footer.css';
 export default function Footer({ location }) {
   const route = getCurrentRoute(location);
   const links = locales
-    .map(locale => (
+    .map((locale) => (
       <NavLink
         className="locale"
         key={locale}

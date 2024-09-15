@@ -9,7 +9,7 @@ import I18n from '../../I18n';
 import './Career.css';
 
 export default function Career({ location }) {
-  const experienceList = experiences.map(experience => {
+  const experienceList = experiences.map((experience) => {
     return <Experience key={experience.slug} {...experience} />;
   });
 

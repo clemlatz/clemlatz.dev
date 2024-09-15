@@ -12,7 +12,7 @@ export default withRouter(function ExperiencePage({ location, match }) {
   const { slug, locale } = match.params;
 
   // Get experience from experiences json file and slug
-  const experience = experiences.find(experience => {
+  const experience = experiences.find((experience) => {
     return experience.slug === slug;
   });
 

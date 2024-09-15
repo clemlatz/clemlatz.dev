@@ -10,7 +10,7 @@ import './Header.css';
 export default function Header({ location, match }) {
   // Add alternate languages links to header
   const route = getCurrentRoute(location);
-  const alternates = locales.map(locale => (
+  const alternates = locales.map((locale) => (
     <link
       key={locale}
       rel="alternate"
