@@ -7,8 +7,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
+    "react-router": "^6.0.0",
+    "react-router-dom": "^6.0.0",
     "react-router-i18n": "^1.0.0",
     "sitemap": "^5.1.0",
     "validator": "^13.7.0"
