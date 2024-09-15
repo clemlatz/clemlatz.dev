@@ -19,7 +19,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "husky": ">=4",
     "lint-staged": ">=10",
-    "prettier": "^1.19.1",
+    "prettier": "^3.0.0",
     "react-scripts": "5.0.1"
   },
   "scripts": {
