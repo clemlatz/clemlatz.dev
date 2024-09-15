@@ -35,7 +35,7 @@ export default withRouter(function Experience(props) {
 
   let tags = null;
   if (props.tags) {
-    tags = props.tags.map(tag => (
+    tags = props.tags.map((tag) => (
       <span key={tag} className="tag">
         #{tag}
       </span>
