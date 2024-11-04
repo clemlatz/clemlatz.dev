@@ -1,48 +1,22 @@
 {
-  "name": "cv",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "nodemailer": "^6.9.9",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-helmet": "^6.0.0",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
-    "react-router-i18n": "^1.0.0",
-    "sitemap": "^8.0.0",
-    "validator": "^13.7.0"
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "eslint-plugin-jest": "^28.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "husky": ">=4",
-    "lint-staged": ">=10",
-    "prettier": "^3.0.0",
-    "react-scripts": "5.0.1"
-  },
+  "name": "clemlatz",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "deploy": "yarn build && yarn map",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "map": "node ./mapsite.js",
-    "lint": "eslint ./src ./functions"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^3.6.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "astro": "^4.16.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
   }
 }

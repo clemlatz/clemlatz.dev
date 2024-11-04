@@ -1,16 +1,11 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-
-import I18n from '../../I18n';
-
 import './Links.css';
 
-export default function Links({ location }) {
+export default function Links() {
   const links = {
-    Bluesky: 'https://bsky.app/profile/clemlatz.dev',
     Mastodon: 'https://mastodon.social/@clemlatz',
     Github: 'https://github.com/clemlatz',
     'Linked in': 'https://www.linkedin.com/in/clemlatz/',
+    Bluesky: 'https://bsky.app/profile/clemlatz.dev',
     Medium: 'https://medium.com/@clemlatz',
     StackOverflow: 'https://stackoverflow.com/users/1053818/clemlatz',
     Twitter: 'https://twitter.com/clemlatz',
@@ -25,11 +20,6 @@ export default function Links({ location }) {
 
   return (
     <div>
-      <Helmet>
-        <title>
-          {`${I18n.getTranslation(location, 'Links')}`} · Clément Latzarus
-        </title>
-      </Helmet>
       <ul className="links">{list}</ul>
     </div>
   );

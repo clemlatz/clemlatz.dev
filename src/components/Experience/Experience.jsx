@@ -1,15 +1,6 @@
-import React from 'react';
-import { withRouter } from 'react-router';
-import { Link } from 'react-router-i18n';
-
-import I18n from '../../I18n';
-
 import './Experience.css';
 
-export default withRouter(function Experience(props) {
-  const { location, match } = props;
-  const { locale } = match.params;
-
+export default function Experience(props) {
   let company = null;
   if (props.company) {
     company = `@ ${props.company}`;
@@ -25,7 +16,7 @@ export default withRouter(function Experience(props) {
     );
   }
 
-  let endYear = ` - ${I18n.getTranslation(location, 'Today')}`;
+  let endYear = ` - Aujourd'hui`;
   if (props.endYear) {
     endYear = ` - ${props.endYear}`;
     if (props.startYear === props.endYear) {
@@ -44,17 +35,15 @@ export default withRouter(function Experience(props) {
   }
 
   // Get localized job title using locale
-  const jobTitle = props.jobTitle[locale];
+  const jobTitle = props.jobTitle['fr'];
 
   return (
     <div className="Experience">
-      <Link key={props.slug} to={`/career/${props.slug}`}>
-        <h2 className="title">{jobTitle}</h2>
-      </Link>
+      <h2 className="title">{jobTitle}</h2>
       <span className="year">
         {props.startYear} {endYear} {company}{' '}
       </span>
       {tags}
     </div>
   );
-});
+};
