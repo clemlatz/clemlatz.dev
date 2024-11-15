@@ -25,6 +25,7 @@ jobs:
         id: get_commit_message
         run: echo "COMMIT_MESSAGE=$(git log -1 --pretty=%B)" >> $GITHUB_ENV
 
+      # https://github.com/marketplace/actions/netlify-actions
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
@@ -32,6 +33,7 @@ jobs:
           github-token: ${{ secrets.PAT }}
           production-branch: main
           deploy-message: ${{ env.COMMIT_MESSAGE }}
+          enable-pull-request-comment: false
           netlify-config-path: ./netlify.toml
           alias: preview-${{ github.event.number }}
           github-deployment-environment: preview
