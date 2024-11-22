@@ -1,0 +1,36 @@
+---
+import {getEntry, getEntries, getCollection} from 'astro:content';
+import Layout from "../layouts/Layout.astro";
+
+const projects = await getCollection('projects');
+
+projects.sort((a, b) => b.data.startYear - a.data.startYear);
+
+---
+
+<Layout title="Projets · Clément Latzarus · développeur web">
+  <main>
+    <h1>Projets</h1>
+
+      {projects.map(project => {
+          let endYear = ` - Aujourd'hui`;
+          if (project.data.endYear) {
+            endYear = ` - ${project.data.endYear}`;
+            if (project.data.startYear === project.data.endYear) {
+              endYear = '';
+            }
+          }
+
+          return (
+              <div class="article">
+                <h2><a href={project.data.url}>{project.data.name}</a></h2>
+                <p>
+                  {project.data.type} ·
+                  {project.data.startYear}{endYear}
+                </p>
+              </div>
+          )
+        }
+      )}
+  </main>
+</Layout>
