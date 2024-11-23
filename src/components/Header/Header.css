@@ -1,6 +1,28 @@
+.Header {
+  background: white;
+  margin: auto;
+  padding: 16px 16px 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 5%);
+}
+
+@media (min-width: 768px) {
+  .Header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px;
+  }
+}
+
+@media (min-width: 980px) {
+  .Header {
+    padding: 16px calc((100vw - 960px) / 2);
+  }
+}
+
 .Header .title {
-  font-size: 3em;
-  margin: 0.5em 0 0;
+  font-size: 2em;
+  margin: 0;
 }
 
 .Header .title a {
@@ -8,49 +30,56 @@
 }
 
 .Header .tagline {
-  margin: 0 0 1em;
+  margin: 0;
 }
 
-.Header .navigation ul {
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+.Header__navigation ul {
   display: flex;
   font-size: 1.25em;
   list-style: none;
   margin: 0;
-  padding: 5px 0;
+  margin-top: 6px;
+  padding: 6px 0;
 }
 
-.Header .navigation li {
+.Header__navigation li {
+  font-size: 1.05em;
   margin-right: 0.25em;
 }
 
-.Header .navigation li:first-child {
-  margin-left: 0.25em;
+@media (min-width: 768px) {
+  .Header__navigation ul {
+    font-size: 1.10em;
+  }
 }
 
-.Header .navigation li::after {
+.Header__navigation li:first-child {
+  margin-left: 0;
+  font-size: 1.10em;
+}
+
+.Header__navigation li::after {
   content: '·';
   margin-left: 0.25em;
 }
 
-.Header .navigation li:last-child::after {
+.Header__navigation li:last-child::after {
   display: none;
 }
 
-.Header .navigation li a {
+.Header__navigation li a {
   /* border-bottom: 1px dashed black; */
   opacity: 0.5;
   transition: opacity 250ms;
 }
 
-.Header .navigation li a.active,
-.Header .navigation li a:hover {
+.Header__navigation li a.active,
+.Header__navigation li a:hover {
   color: black;
   /* border-style: solid; */
   opacity: 1;
 }
 
-.Header .navigation a {
+.Header__navigation a {
   border: 0;
 }
