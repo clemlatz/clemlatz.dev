@@ -43,6 +43,7 @@ const { title } = Astro.props;
 	}
 
 	body {
+		background: rgba(229, 233, 240, 50%);
 		margin: 0;
 		padding: 0;
 	}
@@ -54,8 +55,6 @@ const { title } = Astro.props;
 	body {
 		font-size: 16px;
 		margin: auto;
-		padding: 15px;
-		max-width: 480px;
 	}
 
 	a {
@@ -80,4 +79,15 @@ const { title } = Astro.props;
 	a.button:hover {
 		opacity: 1;
 	}
+
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+
+  main {
+    padding: 15px;
+    margin: auto;
+    max-width: 960px;
+  }
 </style>

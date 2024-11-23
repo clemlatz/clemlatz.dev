@@ -3,43 +3,47 @@ import './Header.css';
 export default function Header() {
   return (
     <header className="Header">
-      <h1 className="title">
-        <a href="/">Clément Latzarus</a>
-      </h1>
-      <p className="tagline">
-        a.k.a.{' '}
-        <a
-          href="https://github.com/clemlatz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          clemlatz
-        </a>{' '}
-        · développeur web
-      </p>
-      <nav className="navigation">
+      <div className="Header__title">
+        <h1 className="title">
+          <a href="/">Clément Latzarus</a>
+        </h1>
+
+        <p className="tagline">
+          a.k.a.{' '}
+          <a
+            href="https://github.com/clemlatz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            clemlatz
+          </a>{' '}
+          · développeur web
+        </p>
+      </div>
+
+      <nav className="Header__navigation">
         <ul>
           <li>
-            <a href="https://blog.clemlatz.dev">Blog</a>
+            <a href="https://blog.clemlatz.dev">blog</a>
           </li>
           <li>
             <a href="/career">
-              Parcours
+              parcours
             </a>
           </li>
           <li>
             <a href="/projects">
-              Projets
+              projets
             </a>
           </li>
           <li>
             <a href="/links">
-              Liens
+              liens
             </a>
           </li>
           <li>
             <a href="/contact">
-              Contact
+              contact
             </a>
           </li>
         </ul>
