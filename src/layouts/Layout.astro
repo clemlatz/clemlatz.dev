@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header/Header.astro';
+import { Icon } from 'astro-icon/components'
 import '@fontsource-variable/raleway/wght.css';
 import '@fontsource-variable/open-sans';
 
@@ -8,6 +9,16 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const links = [
+  { name: 'github', url: 'https://github.com/clemlatz' },
+  { name: 'linkedin', url: 'https://www.linkedin.com/in/clemlatz/' },
+  { name: 'mastodon', url: 'https://mastodon.social/@clemlatz' },
+  { name: 'bluesky', url: 'https://bsky.app/profile/clemlatz.dev' },
+	{ name: 'stackoverflow', url: 'https://stackoverflow.com/users/1053818/clemlatz' },
+	{ name: 'threads', url: 'https://www.threads.net/@clemlatz' },
+  { name: 'twitter', url: 'https://x.com/clemlatz/status/1860292492224020897' },
+];
 ---
 
 <!doctype html>
@@ -23,13 +34,25 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 		<slot />
+	<footer class="Footer">
+		<div class="Footer__links">
+			{links.map(({ name, url }) => <a href={url} aria-label=`Me retrouver sur ${name}`><Icon name=`simple-icons:${name}` /></a>)}
+		</div>
+
+		<p>
+			<a href="https://github.com/clemlatz/clemlatz.dev">code source</a> ·
+			fabriqué avec <a href="https://astro.build">astro</a>
+		</p>
+	</footer>
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
+		--background-gray: rgba(229, 233, 240, 50%);
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
@@ -39,7 +62,7 @@ const { title } = Astro.props;
 	}
 
 	body {
-		background: rgba(229, 233, 240, 50%);
+		background: linear-gradient(var(--background-gray), white);
 		padding: 0;
 		font-family: 'Open Sans Variable', sans-serif;
 		font-size: 18px;
@@ -88,4 +111,35 @@ const { title } = Astro.props;
     margin: auto;
     max-width: 960px;
   }
+
+	.Footer {
+		background: rgba(229, 233, 240, 50%);
+		margin: 64px auto 0;
+		padding: 64px 0 128px;
+
+		.Footer__links {
+			display: flex;
+			justify-content: center;
+			gap: 16px;
+
+			a, a:hover {
+				border: 0
+			}
+
+			[data-icon] {
+				opacity: 0.5;
+				font-size: 2rem;
+				transition: 400ms;
+			}
+
+			[data-icon]:hover {
+				opacity: 1;
+			}
+		}
+
+		p {
+			font-size: 0.8em;
+			text-align: center;
+		}
+	}
 </style>
