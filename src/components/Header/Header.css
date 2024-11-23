@@ -21,6 +21,7 @@
 }
 
 .Header .title {
+  font-weight: 200;
   font-size: 2em;
   margin: 0;
 }
