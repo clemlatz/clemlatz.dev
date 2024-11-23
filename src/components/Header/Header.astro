@@ -1,5 +1,6 @@
 ---
 import './Header.css';
+const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <header class="Header">
@@ -24,20 +25,20 @@ import './Header.css';
   <nav class="Header__navigation">
     <ul>
       <li>
-        <a href="/blog">blog</a>
+        <a class={currentPath.startsWith("/blog") ? "active" : ""} href="/blog">blog</a>
       </li>
       <li>
-        <a href="/career">
+        <a class={currentPath.startsWith("/career") ? "active" : ""} href="/career">
           parcours
         </a>
       </li>
       <li>
-        <a href="/projects">
+        <a class={currentPath.startsWith("/projects") ? "active" : ""} href="/projects">
           projets
         </a>
       </li>
       <li>
-        <a href="/links">
+        <a class={currentPath.startsWith("/links") ? "active" : ""} href="/links">
           liens
         </a>
       </li>
