@@ -35,7 +35,6 @@
 
 .Header__navigation ul {
   display: flex;
-  font-size: 1.25em;
   list-style: none;
   margin: 0;
   margin-top: 6px;
