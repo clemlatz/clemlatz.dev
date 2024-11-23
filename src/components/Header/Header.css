@@ -43,7 +43,7 @@
 }
 
 .Header__navigation li {
-  font-size: 1.05em;
+  font-size: 1em;
   margin-right: 0.25em;
 }
 
@@ -55,12 +55,11 @@
 
 .Header__navigation li:first-child {
   margin-left: 0;
-  font-size: 1.10em;
 }
 
 .Header__navigation li::after {
   content: '·';
-  margin-left: 0.25em;
+  margin-left: 0.1em;
 }
 
 .Header__navigation li:last-child::after {
