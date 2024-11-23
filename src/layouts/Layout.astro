@@ -1,110 +1,112 @@
 ---
 import Header from '../components/Header/Header.astro';
-import { Icon } from 'astro-icon/components'
+import {Icon} from 'astro-icon/components'
 import '@fontsource-variable/raleway/wght.css';
 import '@fontsource-variable/open-sans';
 
 interface Props {
-	title: string;
+  title: string;
 }
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 
 const links = [
-  { name: 'github', url: 'https://github.com/clemlatz' },
-  { name: 'linkedin', url: 'https://www.linkedin.com/in/clemlatz/' },
-  { name: 'mastodon', url: 'https://mastodon.social/@clemlatz' },
-  { name: 'bluesky', url: 'https://bsky.app/profile/clemlatz.dev' },
-	{ name: 'stackoverflow', url: 'https://stackoverflow.com/users/1053818/clemlatz' },
-	{ name: 'threads', url: 'https://www.threads.net/@clemlatz' },
-  { name: 'twitter', url: 'https://x.com/clemlatz/status/1860292492224020897' },
+  {name: 'github', url: 'https://github.com/clemlatz'},
+  {name: 'linkedin', url: 'https://www.linkedin.com/in/clemlatz/'},
+  {name: 'mastodon', url: 'https://mastodon.social/@clemlatz'},
+  {name: 'bluesky', url: 'https://bsky.app/profile/clemlatz.dev'},
+  {name: 'stackoverflow', url: 'https://stackoverflow.com/users/1053818/clemlatz'},
+  {name: 'threads', url: 'https://www.threads.net/@clemlatz'},
+  {name: 'twitter', url: 'https://twitter.com/clemlatz/status/1860292492224020897'},
 ];
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-	<footer class="Footer">
-		<div class="Footer__links">
-			{links.map(({ name, url }) => <a href={url} aria-label=`Me retrouver sur ${name}`><Icon name=`simple-icons:${name}` /></a>)}
-		</div>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="description" content="Astro description"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <meta name="generator" content={Astro.generator}/>
+  <title>{title}</title>
+</head>
+<body>
+<Header/>
+<slot/>
+<footer class="Footer">
+  <div class="Footer__links">
+    {links.map(({name, url}) => <a href={url} aria-label=`Me retrouver sur ${name}`>
+      <Icon name=`simple-icons:${name}`/>
+    </a>)}
+  </div>
 
-		<p>
-			<a href="https://github.com/clemlatz/clemlatz.dev">code source</a> ·
-			fabriqué avec <a href="https://astro.build">astro</a>
-		</p>
-	</footer>
-	</body>
+  <p>
+    <a href="https://github.com/clemlatz/clemlatz.dev">code source</a> ·
+    fabriqué avec <a href="https://astro.build">astro</a>
+  </p>
+</footer>
+</body>
 </html>
 
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--background-gray: rgba(229, 233, 240, 50%);
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --background-gray: rgba(229, 233, 240, 50%);
+    --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+    );
+  }
 
-	body {
-		background: linear-gradient(var(--background-gray), white);
-		padding: 0;
-		font-family: 'Open Sans Variable', sans-serif;
-		font-size: 18px;
-		margin: auto;
-	}
+  body {
+    background: linear-gradient(var(--background-gray), white);
+    padding: 0;
+    font-family: 'Open Sans Variable', sans-serif;
+    font-size: 18px;
+    margin: auto;
+  }
 
-	h1, h2, h3, h4 {
-		font-family: 'Raleway Variable', sans-serif;
-		font-weight: 400;
-	}
+  h1, h2, h3, h4 {
+    font-family: 'Raleway Variable', sans-serif;
+    font-weight: 400;
+  }
 
-	strong {
-		font-weight: 600;
-	}
+  strong {
+    font-weight: 600;
+  }
 
-	a {
-		border-bottom: 1px dashed black;
-		color: black;
-		text-decoration: none;
-	}
+  a {
+    border-bottom: 1px dashed black;
+    color: black;
+    text-decoration: none;
+  }
 
-	a:hover {
-		border-bottom-style: solid;
-	}
+  a:hover {
+    border-bottom-style: solid;
+  }
 
-	a.button {
-		background: #f60;
-		border: 1px solid #f60;
-		border-radius: 5px;
-		color: white;
-		opacity: 0.9;
-		padding: 5px 10px;
-	}
+  a.button {
+    background: #f60;
+    border: 1px solid #f60;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.9;
+    padding: 5px 10px;
+  }
 
-	a.button:hover {
-		opacity: 1;
-	}
+  a.button:hover {
+    opacity: 1;
+  }
 
-	img {
-		height: auto;
-		max-width: 100%;
-	}
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 
   main {
     padding: 15px;
@@ -112,34 +114,35 @@ const links = [
     max-width: 960px;
   }
 
-	.Footer {
-		background: rgba(229, 233, 240, 50%);
-		margin: 64px auto 0;
-		padding: 64px 0 128px;
+  .Footer {
+    background: rgba(229, 233, 240, 50%);
+    margin: 64px auto 0;
+    padding: 64px 0 128px;
 
-		.Footer__links {
-			display: flex;
-			justify-content: center;
-			gap: 16px;
+    .Footer__links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
 
-			a, a:hover {
-				border: 0
-			}
+      a, a:hover {
+        border: 0
+      }
 
-			[data-icon] {
-				opacity: 0.5;
-				font-size: 2rem;
-				transition: 400ms;
-			}
+      [data-icon] {
+        opacity: 0.5;
+        font-size: 2rem;
+        transition: 400ms;
+      }
 
-			[data-icon]:hover {
-				opacity: 1;
-			}
-		}
+      [data-icon]:hover {
+        opacity: 1;
+      }
+    }
 
-		p {
-			font-size: 0.8em;
-			text-align: center;
-		}
-	}
+    p {
+      font-size: 0.8em;
+      margin-top: 1em;
+      text-align: center;
+    }
+  }
 </style>
