@@ -1,3 +1,63 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+[[redirects]]
+  from = "https://www.iwazaru.fr/*"
+  to = "https://clemlatz.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://iwazaru.fr/*"
+  to = "https://clemlatz.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.iwazaru.dev/*"
+  to = "https://clemlatz.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://iwazaru.dev/*"
+  to = "https://clemlatz.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://xn--clment-cva.dev/*"
+  to = "https://clemlatz.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://iwazaru.netlify.com/*"
+  to = "https://clemlatz.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://clemlatz.netlify.app/*"
+  to = "https://clemlatz.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/*"
+  to = "/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+  force = true
