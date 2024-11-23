@@ -24,7 +24,7 @@ export default function Header() {
       <nav className="Header__navigation">
         <ul>
           <li>
-            <a href="https://blog.clemlatz.dev">blog</a>
+            <a href="/blog">blog</a>
           </li>
           <li>
             <a href="/career">

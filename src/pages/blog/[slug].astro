@@ -1,0 +1,106 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import Language from "../../components/Language.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+type BlogPost = CollectionEntry<'blog'>;
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post: BlogPost) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<style>
+  main {
+    width: calc(100% - 2em);
+    max-width: 100%;
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+  }
+
+  .prose {
+    width: 720px;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 1em;
+    color: rgb(var(--gray-dark));
+  }
+
+  .title {
+    margin-bottom: 1em;
+    padding: 1em 0;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+
+  .date {
+    margin-bottom: 0.5em;
+    color: rgb(var(--gray));
+  }
+
+  .last-updated-on {
+    font-style: italic;
+  }
+</style>
+
+<Layout title=`${post.data.title} · Blog · Clément Latzarus · développeur web`>
+  <main>
+    <article>
+      <div class="hero-image">
+        {post.data.heroImage && <img width={1020} height={510} src={post.data.heroImage} alt=""/>}
+      </div>
+      <div class="prose">
+        <div class="title">
+          <div class="date">
+            <Language code={post.data.language}/>
+            <FormattedDate date={post.data.pubDate} language={post.data.language}/>
+            {
+              post.data.updatedDate && (
+                    <div class="last-updated-on">
+                      Last updated on
+                      <FormattedDate date={post.data.updatedDate} language={post.data.language}/>
+                    </div>
+              )
+            }
+          </div>
+          <h1>{post.data.title}</h1>
+          <hr/>
+        </div>
+          <Content />
+        <hr/>
+        <p>
+          Un commentaire ? Une question ?<br/>
+          Utilisez
+          <a href="https://github.com/clemlatz/clemlatz.dev/issues">les issues Github</a>
+        </p>
+      </div>
+    </article>
+  </main>
+</Layout>
