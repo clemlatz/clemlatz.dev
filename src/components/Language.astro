@@ -1,0 +1,14 @@
+---
+interface Props {
+  code: string;
+}
+
+const {code} = Astro.props;
+const language = code === 'fr' ? 'Français' : 'English';
+---
+
+<span>
+  {code === 'fr' && <img src="/language-fr.png" alt="" role="presentation" width="16" height="16"/>}
+  {code === 'en' && <img src="/language-en.png" alt="" role="presentation" width="16" height="16"/>}
+  {language} ·
+</span>
