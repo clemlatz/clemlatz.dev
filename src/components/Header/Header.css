@@ -67,16 +67,15 @@
 }
 
 .Header__navigation li a {
-  /* border-bottom: 1px dashed black; */
-  opacity: 0.5;
+  opacity: 0.75;
+  padding-bottom: 4px;
   transition: opacity 250ms;
 }
 
 .Header__navigation li a.active,
 .Header__navigation li a:hover {
   color: black;
-  /* border-style: solid; */
-  opacity: 1;
+  border-bottom: 2px solid black;
 }
 
 .Header__navigation a {
