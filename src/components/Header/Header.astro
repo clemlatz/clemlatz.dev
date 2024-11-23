@@ -38,7 +38,7 @@ const currentPath = new URL(Astro.request.url).pathname;
         </a>
       </li>
       <li>
-        <a href="/contact">
+        <a class={currentPath.startsWith("/contact") ? "active" : ""}  href="/contact">
           contact
         </a>
       </li>

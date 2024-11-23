@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacter Clément Latzarus · développeur web">
+  <main>
+      <form name="contact" action="/merci.html" enctype="multipart/form-data" data-netlify="true">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" name="name" required>
+          <label for="name">Votre nom</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" name="email" required>
+          <label for="email">Votre adresse e-amil</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="subject" name="subject" required>
+          <label for="subject">Sujet</label>
+        </div>
+        <div class="form-floating mb-3">
+          <textarea class="form-control" id="message" name="message" style="height: 200px" required></textarea>
+          <label for="message">Votre message</label>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</Layout>
