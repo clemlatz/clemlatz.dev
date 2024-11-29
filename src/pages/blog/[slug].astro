@@ -72,7 +72,7 @@ const { Content } = await post.render();
   }
 </style>
 
-<Layout title=`${post.data.title} · Blog · Clément Latzarus · développeur web`>
+<Layout title=`${post.data.title} · Blog · Clément Latzarus · développeur web` canonicalUrl={`/blog/${post.slug}`}>
   <main>
     <article>
       <div class="hero-image">
