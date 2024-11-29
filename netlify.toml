@@ -2,47 +2,7 @@
   command = "npm run build"
   publish = "dist"
 
-[[redirects]]
-  from = "https://www.iwazaru.fr/*"
-  to = "https://clemlatz.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://iwazaru.fr/*"
-  to = "https://clemlatz.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.iwazaru.dev/*"
-  to = "https://clemlatz.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://iwazaru.dev/*"
-  to = "https://clemlatz.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://xn--clment-cva.dev/*"
-  to = "https://clemlatz.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://iwazaru.netlify.com/*"
-  to = "https://clemlatz.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://clemlatz.netlify.app/*"
-  to = "https://clemlatz.dev/:splat"
-  status = 301
-  force = true
+# Old i18n urls
 
 [[redirects]]
   from = "/fr/*"
@@ -56,11 +16,15 @@
   status = 301
   force = true
 
+# Old contact page
+
 [[redirects]]
   from = "/contact.html"
   to = "/contact"
   status = 301
   force = true
+
+# Old blog root url
 
 [[redirects]]
   from = "https://blog.clemlatz.dev/"
@@ -68,8 +32,52 @@
   status = 301
   force = true
 
+# Alternative domains
+
 [[redirects]]
-  from = "https://blog.clemlatz.dev/*"
-  to = "https://clemlatz.dev/:splat"
-  status = 301
-  force = true
+from = "https://www.iwazaru.fr/*"
+to = "https://clemlatz.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://iwazaru.fr/*"
+to = "https://clemlatz.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.iwazaru.dev/*"
+to = "https://clemlatz.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://iwazaru.dev/*"
+to = "https://clemlatz.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://xn--clment-cva.dev/*"
+to = "https://clemlatz.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://iwazaru.netlify.com/*"
+to = "https://clemlatz.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://clemlatz.netlify.app/*"
+to = "https://clemlatz.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://blog.clemlatz.dev/*"
+to = "https://clemlatz.dev/:splat"
+status = 301
+force = true
