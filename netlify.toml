@@ -67,3 +67,9 @@
   to = "https://clemlatz.dev/blog"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://blog.clemlatz.dev/*"
+  to = "https://clemlatz.dev/:splat"
+  status = 301
+  force = true
