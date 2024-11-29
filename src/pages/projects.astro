@@ -10,7 +10,7 @@ projects.sort((a: Project, b:Project) => b.data.startYear - a.data.startYear);
 
 ---
 
-<Layout title="Projets · Clément Latzarus · développeur web" canonicalUrl="/projects">
+<Layout title="Projets" canonicalUrl="/projects">
   <main>
       {projects.map((project: Project) => {
           let endYear = ` - Aujourd'hui`;
