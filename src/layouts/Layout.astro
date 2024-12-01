@@ -43,7 +43,7 @@ const links = [
 <slot/>
 <footer class="Footer">
   <div class="Footer__links">
-    {links.map(({name, url}) => <a href={url} aria-label=`Me retrouver sur ${name}`>
+    {links.map(({name, url}) => <a href={url} rel="me" aria-label=`Me retrouver sur ${name}`>
       <Icon name=`simple-icons:${name}`/>
     </a>)}
   </div>
