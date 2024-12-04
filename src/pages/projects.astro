@@ -6,12 +6,18 @@ type Project = CollectionEntry<'projects'>;
 
 const projects = await getCollection('projects');
 
-projects.sort((a: Project, b:Project) => b.data.startYear - a.data.startYear);
-
+projects.sort((a: Project, b: Project) => b.data.startYear - a.data.startYear);
 ---
 
+<style>
+  .card {
+    width: 300px;
+  }
+</style>
+
 <Layout title="Projets" canonicalUrl="/projects">
-  <main>
+  <main class="projects">
+    <div class="row justify-content-center">
       {projects.map((project: Project) => {
           let endYear = ` - Aujourd'hui`;
           if (project.data.endYear) {
@@ -22,15 +28,23 @@ projects.sort((a: Project, b:Project) => b.data.startYear - a.data.startYear);
           }
 
           return (
-              <div class="article">
-                <h2><a href={project.data.url}>{project.data.name}</a></h2>
-                <p>
-                  {project.data.type} ·
-                  {project.data.startYear}{endYear}
-                </p>
+              <div class="card m-2">
+                {project.data.image &&
+                    <img class="card-img-top" src={project.data.image} alt="" role="presentation">
+                }
+                <div class="card-body">
+                  <h5 class="card-title">{project.data.name}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    {project.data.type}<br/>
+                    {project.data.startYear}{endYear}
+                  </h6>
+                  <p class="card-text"></p>
+                  <a href={project.data.url} class="card-link">www</a>
+                </div>
               </div>
           )
         }
       )}
+    </div>
   </main>
 </Layout>
