@@ -2,39 +2,49 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
+<style>
+  .text {
+    margin: 16px auto;
+    max-width: 768px;
+  }
+</style>
+
 <Layout title="Clément Latzarus · développeur web" canonicalUrl="/">
-	<main>
-		<div>
-			<p>
-				dévoreur de livres
-				<br />
-				amateur de chat
-				<br />
-				papa poule
-				<br />
-				conteur du soir
-				<br />
-				mais aussi
-				<strong>
-					développeur web
-				</strong>{' '}
-				à Paris.<br />
-			</p>
-			<p>
-				Actuellement{' '}
-				<strong>
-					pas
-				</strong>{' '}
-				en recherche d'emploi,<br /> mais{' '}
-				<a
-					href="https://www.linkedin.com/in/clemlatz/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					restons en contact
-				</a>
-				!
-			</p>
-		</div>
-	</main>
+  <main>
+    <div class="text">
+      <h1>Hello <span aria-hidden="true">👋</span></h1>
+      <p>
+        Je suis <strong>développeur web</strong> depuis 2013, suite à une reconversion professionnelle, après avoir
+        travaillé plusieurs années en librairie et dans l'édition.<br/>
+      </p>
+      <p>
+        Aujourd'hui, je suis employé à temps partiel chez <a href="https://pix.fr">Pix</a>, le service public pour
+        évaluer, développer et certifier ses compétences numériques. J'y ai occupé notamment les rôles de Lead
+        Developer, manager, référent accessibilité et développeur web fullstack.
+      </p>
+      <p>
+        Parallèlement, je maintiens <a href="https://biblys.fr">Biblys</a>, un logiciel libre qui a pour vocation de
+        permettre à des maisons d'édition indépendantes de gérer facilement un site pour présenter leur catalogue, et
+        vendre en ligne des livres papier et numérique.
+      </p>
+      <p>
+        Sur ce site, vous pourrez
+        lire <a href="/blog">mon blog</a>,
+        tout savoir sur <a href="/career">mon parcours professionnel</a>,
+        découvrir <a href="/projects">mes projets personnels</a>
+        et <a href="/contact">me contacter</a> !
+      </p>
+      <p>
+        Actuellement, <strong>je ne suis pas</strong> en recherche d'emploi, mais
+        <a
+            href="https://www.linkedin.com/in/clemlatz/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          restons en contact
+        </a>
+        !
+      </p>
+    </div>
+  </main>
 </Layout>
