@@ -29,17 +29,14 @@ projects.sort((a: Project, b: Project) => b.data.startYear - a.data.startYear);
 
           return (
               <div class="card m-2">
-                {project.data.image &&
-                    <img class="card-img-top" src={project.data.image} alt="" role="presentation">
-                }
                 <div class="card-body">
                   <h5 class="card-title">{project.data.name}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">
-                    {project.data.type}<br/>
                     {project.data.startYear}{endYear}
                   </h6>
-                  <p class="card-text"></p>
-                  <a href={project.data.url} class="card-link">www</a>
+                  <p class="card-text">{project.data.type}</p>
+                  <a href={project.data.url}>www</a> ·
+                  <a href={project.data.source}>source</a>
                 </div>
               </div>
           )
