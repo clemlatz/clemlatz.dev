@@ -11,7 +11,7 @@ test('displays projects page', async ({page}) => {
   await page.goto('/projects');
 
   await expect(page).toHaveTitle('Projets · Clément Latzarus · développeur web');
-  await expect(page.getByRole('link', {name: 'Biblys'})).toBeVisible();
+  await expect(page.getByRole('heading', {name: 'Biblys'})).toBeVisible();
 });
 
 test('displays blog page', async ({page}) => {
