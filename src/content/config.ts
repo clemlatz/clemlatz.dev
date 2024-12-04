@@ -8,6 +8,7 @@ const projetsCollection = defineCollection({
     startYear: z.number(),
     endYear: z.number().optional(),
     url: z.string(),
+    source: z.string().optional(),
   }),
 });
 
