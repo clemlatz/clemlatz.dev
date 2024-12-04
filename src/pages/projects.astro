@@ -12,6 +12,7 @@ projects.sort((a: Project, b: Project) => b.data.startYear - a.data.startYear);
 <style>
   .card {
     width: 300px;
+    padding: 0;
   }
 </style>
 
@@ -28,7 +29,10 @@ projects.sort((a: Project, b: Project) => b.data.startYear - a.data.startYear);
           }
 
           return (
-              <div class="card m-2">
+              <div class="card m-2 p-0">
+                {project.data.image &&
+                    <img class="card-img-top" src={project.data.image} alt="" role="presentation">
+                }
                 <div class="card-body">
                   <h5 class="card-title">{project.data.name}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">
