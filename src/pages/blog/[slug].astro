@@ -78,6 +78,7 @@ const { Content } = await post.render();
       </div>
       <div class="prose">
         <div class="title">
+          <h1>{post.data.title}</h1>
           <div class="date">
             <Language code={post.data.language}/>
             <FormattedDate date={post.data.pubDate} language={post.data.language}/>
@@ -90,15 +91,16 @@ const { Content } = await post.render();
               )
             }
           </div>
-          <h1>{post.data.title}</h1>
           <hr/>
         </div>
-          <Content />
+        <Content/>
         <hr/>
         <p>
           Un commentaire ? Une question ?<br/>
           Utilisez
           <a href="https://github.com/clemlatz/clemlatz.dev/issues">les issues Github</a>
+          ou
+          <a href="/contact">contactez-moi</a>
         </p>
       </div>
     </article>
