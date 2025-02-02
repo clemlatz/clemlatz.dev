@@ -70,7 +70,12 @@ const { Content } = await post.render();
   }
 </style>
 
-<Layout title=`${post.data.title} · Blog` canonicalUrl={`/blog/${post.slug}`}>
+<Layout
+    title=`${post.data.title} · Blog`
+    description={post.data.description}
+    canonicalUrl={`/blog/${post.slug}`}
+    previewImageUrl={post.data.heroImage}
+>
   <main>
     <article lang={post.data.language}>
       <div class="hero-image">

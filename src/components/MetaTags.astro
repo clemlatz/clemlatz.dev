@@ -1,0 +1,29 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  type?: 'website'|'article';
+  canonicalUrl?: string;
+  imageUrl?: string;
+}
+
+const {
+  title = "Clément Latzarus",
+  description = "Développeur web basé à Paris",
+  type = "website",
+  canonicalUrl = "https://clemlatz.dev/",
+  imageUrl = "",
+} = Astro.props;
+
+const fullUrl = canonicalUrl.startsWith('https://clemlatz.dev') ? canonicalUrl : `https://clemlatz.dev${canonicalUrl}`;
+const fullImageUrl = imageUrl.startsWith('https://clemlatz.dev') ? imageUrl : `https://clemlatz.dev${imageUrl}`;
+
+---
+{canonicalUrl && <link rel="canonical" href={fullUrl}/>}
+<meta name="description" content={description}>
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={fullUrl} />
+{imageUrl && <meta property="og:image" content={fullImageUrl} />}
