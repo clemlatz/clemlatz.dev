@@ -19,7 +19,7 @@ const fullUrl = canonicalUrl.startsWith('https://clemlatz.dev') ? canonicalUrl :
 const fullImageUrl = imageUrl.startsWith('https://clemlatz.dev') ? imageUrl : `https://clemlatz.dev${imageUrl}`;
 
 ---
-{canonicalUrl && <link rel="canonical" href={fullUrl}/>}
+{canonicalUrl && <link rel="canonical" href={fullUrl}>}
 <meta name="description" content={description}>
 
 <meta property="og:title" content={title} />
