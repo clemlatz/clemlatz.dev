@@ -3,12 +3,11 @@ title: Ajouter un lien à Flus depuis une application iOS
 description: J’adore l’outil de veille Flus, mais il me manquait un moyen de pouvoir facilement ajouter un lien depuis mon téléphone ou ma tablette. J’ai donc créé un raccourci pour ça et je vous explique comment.
 pubDate: 2025-02-03
 language: fr
+heroImage: /blog/raccouris-ios-flus_menu-de-partage.jpg
 ---
 
 J’adore l’outil de veille [Flus](https://flus.fr), mais il me manquait un moyen de pouvoir facilement ajouter un lien
 depuis mon téléphone ou ma tablette. J’ai donc créé [un raccourci pour ça](https://www.icloud.com/shortcuts/dd59c81abbf446e9bf52daa0ada90372) et je vous explique comment.
-
-![Une capture d'écran du menu de partage iOS avec l'option Ajouter à Flus](/blog/raccouris-ios-flus_menu-de-partage.jpg)
 
 ## Flus, l’outil de veille presque parfait
 
