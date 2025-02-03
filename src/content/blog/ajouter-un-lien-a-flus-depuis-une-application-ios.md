@@ -7,7 +7,9 @@ heroImage: /blog/raccouris-ios-flus_menu-de-partage.jpg
 ---
 
 J’adore l’outil de veille [Flus](https://flus.fr), mais il me manquait un moyen de pouvoir facilement ajouter un lien
-depuis mon téléphone ou ma tablette. J’ai donc créé [un raccourci pour ça](https://www.icloud.com/shortcuts/dd59c81abbf446e9bf52daa0ada90372) et je vous explique comment.
+depuis mon téléphone ou ma tablette. J’ai donc
+créé [un raccourci pour ça](https://www.icloud.com/shortcuts/dd59c81abbf446e9bf52daa0ada90372) et je vous explique
+comment.
 
 ## Flus, l’outil de veille presque parfait
 
@@ -57,8 +59,8 @@ qu'il fait bien ce que je dis avant de l'ajouter (ce que je recommande).
 
 1. Cliquer sur **Rechercher des actions**
 2. Chercher l’action **Texte** et l’ajouter
-3. Entrer l’URL : `https://app.flus.fr/links/search?url=`. Si comme moi vous avez installé votre propre instance de
-   Flus, il faut remplacer ici [app.flus.fr](http://app.flus.fr) par votre domaine.
+3. Entrer l’URL : `https://app.flus.fr/links/search?autosubmit=true&url=`. Si comme moi vous avez installé votre propre
+   instance de Flus, il faut remplacer ici [app.flus.fr](http://app.flus.fr) par votre domaine.
 4. Placer le curseur après le signe « = » à la fin de l’URL
 5. Cliquer sur **Sélectionner une variable** puis sur **URL**
 
