@@ -1,0 +1,18 @@
+media:
+  input: public
+  output: /
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: src/content/projets
+    view:
+      fields: [ title, draft, date ]
+    fields:
+      - { name: name, label: Nom, type: string }
+      - { name: type, label: Type, type: string }
+      - { name: startYear, label: Début, type: number }
+      - { name: endYear, label: Fin, type: number }
+      - { name: url, label: Url, type: string }
+      - { name: source, label: Source, type: string }
+      - { name: image, label: Image, type: string }
