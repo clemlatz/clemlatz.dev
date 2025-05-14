@@ -28,5 +28,14 @@ content:
       - { name: pubDate, label: Date de publication, type: date }
       - { name: updatedDate, label: Date de mise à jour, type: date }
       - { name: heroImage, label: Image, type: string }
-      - { name: language, label: Langue, type: string }
-      - { name: body, label: Corps, type: string }
+      - name: language
+        label: Langue
+        type: select
+        options:
+          values:
+          - value: fr
+            label: Français
+          - value: en
+            label: Anglais
+      - { name: body, label: Corps, type: rich-text }
+      
