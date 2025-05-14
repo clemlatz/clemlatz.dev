@@ -5,7 +5,7 @@ content:
   - name: projects
     label: Projects
     type: collection
-    path: src/content/projets
+    path: src/content/projects
     view:
       fields: [ title, draft, date ]
     fields:
