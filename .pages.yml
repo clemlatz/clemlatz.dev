@@ -7,7 +7,7 @@ content:
     type: collection
     path: src/content/projects
     view:
-      fields: [ title, draft, date ]
+      fields: [ name, startYear ]
     fields:
       - { name: name, label: Nom, type: string }
       - { name: type, label: Type, type: string }
