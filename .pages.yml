@@ -16,3 +16,17 @@ content:
       - { name: url, label: Url, type: string }
       - { name: source, label: Source, type: string }
       - { name: image, label: Image, type: string }
+  - name: posts
+    label: Blog
+    type: collection
+    path: src/content/blog
+    view:
+      fields: [ title, pubDate ]
+    fields:
+      - { name: title, label: Titre, type: string }
+      - { name: description, label: Description, type: string }
+      - { name: pubDate, label: Date de publication, type: date }
+      - { name: updatedDate, label: Date de mise à jour, type: date }
+      - { name: heroImage, label: Image, type: string }
+      - { name: language, label: Langue, type: string }
+      - { name: body, label: Corps, type: string }
