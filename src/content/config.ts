@@ -27,7 +27,18 @@ const blogCollection = defineCollection({
   }),
 });
 
+const soundCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    fileUrl: z.string(),
+  })
+});
+
 export const collections = {
   'projects': projetsCollection,
   'blog': blogCollection,
+  'sounds': soundCollection,
 };

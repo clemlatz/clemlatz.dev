@@ -1,0 +1,100 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+type Sound = CollectionEntry<'sounds'>;
+
+export async function getStaticPaths() {
+  const sounds = await getCollection('sounds');
+  return sounds.map((sound: Sound) => ({
+    params: { slug: sound.slug },
+    props: sound,
+  }));
+}
+
+const sound = Astro.props;
+const { Content } = await sound.render();
+---
+
+<style>
+  main {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+  }
+
+  .prose {
+    font-size: 20px;
+    line-height: 1.3em;
+    width: 720px;
+    max-width: calc(100%);
+    margin: auto;
+    color: rgb(var(--gray-dark));
+  }
+
+  .title {
+    padding: 1em 0;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+
+  .date {
+    margin-bottom: 0.5em;
+    color: rgb(var(--gray));
+  }
+
+  .last-updated-on {
+    font-style: italic;
+  }
+
+  .audio-player {
+    display: block;
+    margin: auto auto 2em;
+    width: 90%;
+  }
+</style>
+
+<Layout
+    title=`${sound.data.title} · Blog`
+    description={sound.data.description}
+    canonicalUrl={`/blog/${sound.slug}`}
+>
+  <main>
+    <article lang="fr">
+      <div class="prose">
+        <div class="title">
+          <h1>{sound.data.title}</h1>
+          <div class="date">
+            <FormattedDate date={sound.data.pubDate} language="fr"/>
+          </div>
+          <hr/>
+        </div>
+        <audio class="audio-player" controls>
+            <source src={sound.data.fileUrl} type="audio/mpeg"/>
+            Your browser does not support the audio element.
+        </audio>
+        <Content/>
+      </div>
+    </article>
+  </main>
+</Layout>
