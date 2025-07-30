@@ -74,6 +74,27 @@ const { Content } = await sound.render();
   }
 </style>
 
+<script>
+  /** global umami */
+  const audioPlayer = document.querySelector('.audio-player');
+  if (audioPlayer) {
+    const audioSlug = audioPlayer.getAttribute('data-audio-slug');
+    audioPlayer.addEventListener('play', () => {
+      console.log('audio played');
+      window.umami.track('audio-played', {
+        slug: audioSlug,
+      })
+    });
+
+    audioPlayer.addEventListener('ended', () => {
+      console.log('audio ended');
+      window.umami.track('audio-ended', {
+        slug: audioSlug,
+      })
+    });
+  }
+</script>
+
 <Layout
     title=`${sound.data.title} · Blog`
     description={sound.data.description}
@@ -89,7 +110,7 @@ const { Content } = await sound.render();
           </div>
           <hr/>
         </div>
-        <audio class="audio-player" controls>
+        <audio class="audio-player" data-audio-slug={sound.slug} controls>
             <source src={sound.data.fileUrl} type="audio/mpeg"/>
             Your browser does not support the audio element.
         </audio>
