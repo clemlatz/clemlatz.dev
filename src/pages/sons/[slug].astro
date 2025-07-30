@@ -80,14 +80,14 @@ const { Content } = await sound.render();
   if (audioPlayer) {
     const audioSlug = audioPlayer.getAttribute('data-audio-slug');
     audioPlayer.addEventListener('play', () => {
-      console.log('audio played');
+      console.log(`audio played: ${audioSlug}`);
       window.umami.track('audio-played', {
         slug: audioSlug,
       })
     });
 
     audioPlayer.addEventListener('ended', () => {
-      console.log('audio ended');
+      console.log(`audio ended: ${audioSlug}`);
       window.umami.track('audio-ended', {
         slug: audioSlug,
       })
