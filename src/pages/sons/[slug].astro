@@ -34,7 +34,7 @@ const { Content } = await sound.render();
 
   .hero-image img {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 1em;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
   }
@@ -96,9 +96,10 @@ const { Content } = await sound.render();
 </script>
 
 <Layout
-    title=`${sound.data.title} · Blog`
+    title=`${sound.data.title} · Sons`
     description={sound.data.description}
-    canonicalUrl={`/blog/${sound.slug}`}
+    canonicalUrl={`/sons/${sound.slug}`}
+    previewImageUrl={sound.data.coverImage}
 >
   <main>
     <article lang="fr">
@@ -108,8 +109,12 @@ const { Content } = await sound.render();
           <div class="date">
             <FormattedDate date={sound.data.pubDate} language="fr"/>
           </div>
-          <hr/>
         </div>
+
+        <div class="hero-image">
+          {sound.data.coverImage && <img width={1020} height={510} src={sound.data.coverImage} alt=""/>}
+        </div>
+
         <audio class="audio-player" data-audio-slug={sound.slug} controls>
             <source src={sound.data.fileUrl} type="audio/mpeg"/>
             Your browser does not support the audio element.

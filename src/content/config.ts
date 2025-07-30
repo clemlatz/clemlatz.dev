@@ -34,6 +34,7 @@ const soundCollection = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     fileUrl: z.string(),
+    coverImage: z.string().optional(),
   })
 });
 
