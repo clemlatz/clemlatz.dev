@@ -81,3 +81,15 @@ from = "https://blog.clemlatz.dev/*"
 to = "https://clemlatz.dev/:splat"
 status = 301
 force = true
+
+[[redirects]]
+from = "https://clemlatz.dev/sons/la-licorne-des-mers"
+to = "https://clemlatz.dev/blog/la-licorne-des-mers"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://clemlatz.dev/sons/"
+to = "https://clemlatz.dev/blog/"
+status = 301
+force = true

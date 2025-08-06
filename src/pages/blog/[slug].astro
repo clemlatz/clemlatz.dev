@@ -17,6 +17,26 @@ export async function getStaticPaths() {
 const post = Astro.props;
 const { Content } = await post.render();
 ---
+<script>
+  /** global umami */
+  const audioPlayer = document.querySelector('.audio-player');
+  if (audioPlayer) {
+    const audioSlug = audioPlayer.getAttribute('data-slug');
+    audioPlayer.addEventListener('play', () => {
+      console.log(`audio played: ${audioSlug}`);
+      window.umami.track('audio-played', {
+        slug: audioSlug,
+      })
+    });
+
+    audioPlayer.addEventListener('ended', () => {
+      console.log(`audio ended: ${audioSlug}`);
+      window.umami.track('audio-ended', {
+        slug: audioSlug,
+      })
+    });
+  }
+</script>
 
 <style>
   main {
