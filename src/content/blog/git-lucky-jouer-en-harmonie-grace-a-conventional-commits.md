@@ -4,6 +4,7 @@ description: Comment rédiger de meilleurs message de commit peut nous aider à 
 pubDate: 2024-12-06
 heroImage: /blog/git-lucky.jpg
 language: fr
+category: web
 ---
 
 Selon la manière dont sont rédigés les messages de <span lang="en">commits</span> d’une <i lang="en">pull request</i>, une revue de code peut s’apparenter, dans le meilleur des cas, à la lecture d’un bon roman à suspense, et dans le pire, au travail archéologique minutieux nécessaire pour comprendre les textes de loi d’une civilisation extraterrestre disparue depuis cinq millénaires.

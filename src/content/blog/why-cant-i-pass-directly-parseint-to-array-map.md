@@ -4,6 +4,7 @@ description: Don't do [].map(parseInt)!
 pubDate: 2021-12-10
 heroImage: https://miro.medium.com/v2/resize:fit:720/format:webp/1*OUM0IENQBqeetjcUGvAQpA.png
 language: en
+category: web
 ---
 
 I’d like to share something I learned thanks to the [Advent of Code 2021](https://github.com/iwazaru/advent-of-code). If you need to convert an array of strings into array of integers (which you’ll need to do often while participating in the advent of code), you might use the [Array.map](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method and the [parseInt](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt) function and write something like:

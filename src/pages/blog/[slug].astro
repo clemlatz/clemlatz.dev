@@ -88,6 +88,10 @@ const { Content } = await post.render();
   .last-updated-on {
     font-style: italic;
   }
+
+  .category {
+    text-transform: capitalize;
+  }
 </style>
 
 <Layout
@@ -105,6 +109,7 @@ const { Content } = await post.render();
         <div class="title">
           <h1>{post.data.title}</h1>
           <div class="date">
+            <span class="category">{post.data.category}</span> ·
             <Language code={post.data.language}/>
             <FormattedDate date={post.data.pubDate} language={post.data.language}/>
             {

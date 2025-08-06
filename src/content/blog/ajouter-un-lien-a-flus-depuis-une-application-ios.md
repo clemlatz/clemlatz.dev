@@ -4,6 +4,7 @@ description: J’adore l’outil de veille Flus, mais il me manquait un moyen de
 pubDate: 2025-02-03
 language: fr
 heroImage: /blog/raccouris-ios-flus_menu-de-partage.jpg
+category: web
 ---
 
 J’adore l’outil de veille [Flus](https://flus.fr), mais il me manquait un moyen de pouvoir facilement ajouter un lien

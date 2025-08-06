@@ -47,12 +47,17 @@ const posts = (await getCollection('blog')).sort(
   }
 
   .date {
+    font-size: 1rem;
     margin: .5em 0;
     color: rgb(var(--gray));
   }
 
   ul a:hover img {
     box-shadow: var(--box-shadow);
+  }
+
+  .category {
+    text-transform: capitalize;
   }
 
   @media (max-width: 720px) {
@@ -80,6 +85,7 @@ const posts = (await getCollection('blog')).sort(
                     </a>
                   </h4>
                   <p class="date">
+                    <span class="category">{post.data.category}</span> ·
                     <Language code={post.data.language}/>
                     <FormattedDate date={post.data.pubDate} language={post.data.language}/>
                   </p>

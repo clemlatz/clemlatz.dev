@@ -4,6 +4,7 @@ description: Le chaînon manquant entre vos radiateurs Tiko et vos appareils App
 pubDate: 2024-01-05
 heroImage: /homebridge-tiko/hero-image.png
 language: fr
+category: web
 ---
 
 [Tiko](https://www.tiko.fr/) (aussi appelé [Mon Pilotage elec](https://particuliers.engie.fr/landing/mon-pilotage-elec-sea.html) 

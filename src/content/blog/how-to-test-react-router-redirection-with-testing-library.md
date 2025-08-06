@@ -4,6 +4,7 @@ description: React testing-library is very convenient to test React components r
 pubDate: 2021-08-20
 heroImage: https://res.cloudinary.com/practicaldev/image/fetch/s--IqKN_SSk--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/b5t7qfsnpnj4531hhi9a.png
 language: en
+category: web
 ---
 
 React testing-library is very convenient to test React components rendering from props, fire events and check DOM elements. react-router uses a `<Redirect>` component to trigger a redirect, but how can we test that this component is called using testing-library?

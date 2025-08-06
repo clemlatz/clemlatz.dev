@@ -4,6 +4,7 @@ description: Une histoire imaginée et racontée par Justine.
 pubDate: 2025-07-30
 heroImage: /images/sounds/la-licorne-des-mers.jpg
 language: fr
+category: sons
 ---
 
 <audio controls class="audio-player" data-slug="la-licorne-des-mers">

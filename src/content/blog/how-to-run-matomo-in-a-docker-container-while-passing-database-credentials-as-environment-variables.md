@@ -4,6 +4,7 @@ description: If you’re using Docker to run Matomo, you might want to keep your
 pubDate: 2020-01-17
 heroImage: https://cdn-images-1.medium.com/max/8064/1*-iGWtTqpcZgvix1DTgrqUA.jpeg
 language: en
+category: web
 ---
 
 In the open-source, privacy focused, web analytics software [Matomo](https://matomo.org/), database credentials are stored in the `config/config.ini.php` file.
