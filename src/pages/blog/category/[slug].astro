@@ -1,0 +1,23 @@
+---
+import {getCollection} from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import PostList from "../../../components/PostList.astro";
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const categoryList = Array.from(new Set(posts.map(post => post.data.category)));
+  return categoryList.map(category => ({
+    params: { slug: category },
+  }));
+}
+
+const postsFromCategory = posts.filter(post => post.data.category === Astro.params.slug);
+---
+
+<Layout title="Blog" canonicalUrl="/blog/">
+  <PostList posts={postsFromCategory} />
+</Layout>

@@ -36,10 +36,6 @@ const { posts } = Astro.props;
     border-radius: 12px;
   }
 
-  .Post a {
-    display: block;
-  }
-
   .title {
     margin-top: .5rem;
     font-size: 2rem;
@@ -82,7 +78,11 @@ const { posts } = Astro.props;
                             </a>
                         </h4>
                         <p class="date">
-                            <span class="category">{post.data.category}</span> ·
+                            <span class="category">
+                                <a href=`/blog/category/${post.data.category}`>
+                                  {post.data.category}
+                                </a>
+                            </span> ·
                             <Language code={post.data.language}/>
                             <FormattedDate date={post.data.pubDate} language={post.data.language}/>
                         </p>
