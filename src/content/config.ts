@@ -24,6 +24,7 @@ const blogCollection = defineCollection({
     language: z.enum(['en', 'fr']),
     category: z.enum(['web', 'sons']),
     audioUrl: z.string().optional(),
+    draft: z.boolean().optional(),
   }),
 });
 
