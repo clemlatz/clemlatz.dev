@@ -9,6 +9,14 @@ const { audioUrl, slug }: Props = Astro.props;
 
 ---
 
+<style>
+  .audio-player {
+    display: block;
+    margin: auto auto 2em;
+    width: 90%;
+  }
+</style>
+
 <script>
   /** global umami */
   const audioPlayer = document.querySelector('.audio-player');

@@ -90,6 +90,6 @@ force = true
 
 [[redirects]]
 from = "https://clemlatz.dev/sons/"
-to = "https://clemlatz.dev/blog/"
+to = "https://clemlatz.dev/blog/category/sons"
 status = 301
 force = true
