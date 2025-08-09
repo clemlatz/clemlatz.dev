@@ -100,39 +100,37 @@ const { Content } = await post.render();
     canonicalUrl={`/blog/${post.slug}`}
     previewImageUrl={post.data.heroImage}
 >
-  <main>
-    <article lang={post.data.language}>
-      <div class="hero-image">
-        {post.data.heroImage && <img width={1020} height={510} src={post.data.heroImage} alt=""/>}
-      </div>
-      <div class="prose">
-        <div class="title">
-          <h1>{post.data.title}</h1>
-          <div class="date">
-            <span class="category">{post.data.category}</span> ·
-            <Language code={post.data.language}/>
-            <FormattedDate date={post.data.pubDate} language={post.data.language}/>
-            {
-              post.data.updatedDate && (
-                    <div class="last-updated-on">
-                      Last updated on
-                      <FormattedDate date={post.data.updatedDate} language={post.data.language}/>
-                    </div>
-              )
-            }
-          </div>
-          <hr/>
+  <article lang={post.data.language}>
+    <div class="hero-image">
+      {post.data.heroImage && <img width={1020} height={510} src={post.data.heroImage} alt=""/>}
+    </div>
+    <div class="prose">
+      <div class="title">
+        <h1>{post.data.title}</h1>
+        <div class="date">
+          <span class="category">{post.data.category}</span> ·
+          <Language code={post.data.language}/>
+          <FormattedDate date={post.data.pubDate} language={post.data.language}/>
+          {
+            post.data.updatedDate && (
+                  <div class="last-updated-on">
+                    Last updated on
+                    <FormattedDate date={post.data.updatedDate} language={post.data.language}/>
+                  </div>
+            )
+          }
         </div>
-        <Content/>
         <hr/>
-        <p>
-          Un commentaire ? Une question ?<br/>
-          Utilisez
-          <a href="https://github.com/clemlatz/clemlatz.dev/issues">les issues Github</a>
-          ou
-          <a href="/contact">contactez-moi</a>
-        </p>
       </div>
-    </article>
-  </main>
+      <Content/>
+      <hr/>
+      <p>
+        Un commentaire ? Une question ?<br/>
+        Utilisez
+        <a href="https://github.com/clemlatz/clemlatz.dev/issues">les issues Github</a>
+        ou
+        <a href="/contact">contactez-moi</a>
+      </p>
+    </div>
+  </article>
 </Layout>

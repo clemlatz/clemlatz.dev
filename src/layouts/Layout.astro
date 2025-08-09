@@ -46,7 +46,9 @@ const links = [
 </head>
 <body>
 <Header/>
-<slot/>
+<main>
+  <slot/>
+</main>
 <footer class="Footer">
   <div class="Footer__links">
     {links.map(({name, url}) => <a href={url} rel="me" aria-label=`Me retrouver sur ${name}`>
