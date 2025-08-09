@@ -1,19 +1,22 @@
 ---
-
 type Props = {
-    audioUrl: string;
-    slug: string;
+  audioUrl: string;
+  slug: string;
 };
 
-const { audioUrl, slug }: Props = Astro.props;
-
+const {audioUrl, slug}: Props = Astro.props;
 ---
 
 <style>
   .audio-player {
-    display: block;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
     margin: auto auto 2em;
-    width: 90%;
+  }
+
+  .audio-player__player {
+    width: 100%;
   }
 </style>
 
@@ -38,7 +41,12 @@ const { audioUrl, slug }: Props = Astro.props;
   }
 </script>
 
-<audio controls class="audio-player" data-slug={slug}>
+<div class="audio-player">
+  <audio controls class="audio-player__player" data-slug={slug}>
     <source src={audioUrl} type="audio/mpeg">
     Votre navigateur ne supporte pas la balise audio.
-</audio>
+  </audio>
+  <a href={audioUrl} class="btn btn-secondary" download={`${slug}.mp3`}>
+    Télécharger
+  </a>
+</div>
