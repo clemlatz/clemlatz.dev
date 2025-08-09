@@ -23,6 +23,7 @@ const blogCollection = defineCollection({
     heroImage: z.string().optional(),
     language: z.enum(['en', 'fr']),
     category: z.enum(['web', 'sons']),
+    audioUrl: z.string().optional(),
   }),
 });
 
