@@ -1,103 +1,13 @@
 ---
 import {getCollection} from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import Language from '../../components/Language.astro';
 import Layout from '../../layouts/Layout.astro';
+import PostList from "../../components/PostList.astro";
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
-<style>
-  a {
-    border: 0;
-  }
-
-  a:hover {
-    color: #336699;
-  }
-
-  img {
-    height: auto;
-    max-width: 100%;
-  }
-
-  .Post {
-    margin: 48px 0;
-  }
-
-  .Post * {
-    text-decoration: none;
-    transition: 0.2s ease;
-  }
-
-  .Post img {
-    margin-bottom: 0.5rem;
-    border-radius: 12px;
-  }
-
-  .Post a {
-    display: block;
-  }
-
-  .title {
-    margin-top: .5rem;
-    font-size: 2rem;
-  }
-
-  .date {
-    font-size: 1rem;
-    margin: .5em 0;
-    color: rgb(var(--gray));
-  }
-
-  ul a:hover img {
-    box-shadow: var(--box-shadow);
-  }
-
-  .category {
-    text-transform: capitalize;
-  }
-
-  @media (max-width: 720px) {
-    ul {
-      gap: 0.5em;
-    }
-
-    ul li {
-      width: 100%;
-    }
-  }
-</style>
-
 <Layout title="Blog" canonicalUrl="/blog/">
-  <main>
-    <section>
-        {
-          posts.map((post) => (
-              <article class="Post">
-                <div class="Post__content">
-
-                  <h4 class="title">
-                    <a href={`/blog/${post.slug}`}>
-                      {post.data.title}
-                    </a>
-                  </h4>
-                  <p class="date">
-                    <span class="category">{post.data.category}</span> ·
-                    <Language code={post.data.language}/>
-                    <FormattedDate date={post.data.pubDate} language={post.data.language}/>
-                  </p>
-                  {post.data.description &&
-                      <p>
-                        {post.data.description}
-                      </p>
-                  }
-                </div>
-              </article>
-          ))
-        }
-    </section>
-  </main>
+  <PostList posts={posts} />
 </Layout>

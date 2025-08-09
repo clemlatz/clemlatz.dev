@@ -1,0 +1,100 @@
+---
+import { type CollectionEntry } from 'astro:content';
+import FormattedDate from "./FormattedDate.astro";
+import Language from "./Language.astro";
+
+type BlogPost = CollectionEntry<'blog'>;
+
+const { posts } = Astro.props;
+---
+
+<style>
+  a {
+    border: 0;
+  }
+
+  a:hover {
+    color: #336699;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .Post {
+    margin: 48px 0;
+  }
+
+  .Post * {
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+
+  .Post img {
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+  }
+
+  .Post a {
+    display: block;
+  }
+
+  .title {
+    margin-top: .5rem;
+    font-size: 2rem;
+  }
+
+  .date {
+    font-size: 1rem;
+    margin: .5em 0;
+    color: rgb(var(--gray));
+  }
+
+  ul a:hover img {
+    box-shadow: var(--box-shadow);
+  }
+
+  .category {
+    text-transform: capitalize;
+  }
+
+  @media (max-width: 720px) {
+    ul {
+      gap: 0.5em;
+    }
+
+    ul li {
+      width: 100%;
+    }
+  }
+</style>
+
+<main>
+    <section>
+      {
+        posts.map((post: BlogPost) => (
+                <article class="Post">
+                    <div class="Post__content">
+
+                        <h4 class="title">
+                            <a href={`/blog/${post.slug}`}>
+                              {post.data.title}
+                            </a>
+                        </h4>
+                        <p class="date">
+                            <span class="category">{post.data.category}</span> ·
+                            <Language code={post.data.language}/>
+                            <FormattedDate date={post.data.pubDate} language={post.data.language}/>
+                        </p>
+                      {post.data.description &&
+                              <p>
+                                {post.data.description}
+                              </p>
+                      }
+                    </div>
+                </article>
+        ))
+      }
+    </section>
+</main>
