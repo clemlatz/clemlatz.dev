@@ -9,15 +9,27 @@ const {audioUrl, slug}: Props = Astro.props;
 
 <style>
   .audio-player {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
     margin: auto auto 2em;
   }
 
-  .audio-player__player {
+  .audio-player__player,
+  .audio-player__download {
     width: 100%;
   }
+
+  @media(min-width: 512px) {
+    .audio-player {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .audio-player__download {
+      width: 160px;
+    }
+  }
+
+  .audio
 </style>
 
 <script>
@@ -46,7 +58,7 @@ const {audioUrl, slug}: Props = Astro.props;
     <source src={audioUrl} type="audio/mpeg">
     Votre navigateur ne supporte pas la balise audio.
   </audio>
-  <a href={audioUrl} class="btn btn-secondary" download={`${slug}.mp3`}>
+  <a href={audioUrl} class="btn btn-secondary audio-player__download" download={`${slug}.mp3`}>
     Télécharger
   </a>
 </div>
