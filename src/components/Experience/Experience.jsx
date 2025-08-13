@@ -46,4 +46,4 @@ export default function Experience(props) {
       {tags}
     </div>
   );
-};
+}

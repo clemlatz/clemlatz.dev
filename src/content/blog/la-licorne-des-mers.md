@@ -8,7 +8,7 @@ category: sons
 audioUrl: https://dts.podtrac.com/redirect.mp3/https://sons-audioblogs.arte.tv/audioblogs/v2/sons/258125/258445/podcast_258445_dXf6l.mp3
 ---
 
-« *Il était une fois une licorne qui avait des ailes…* »
+« _Il était une fois une licorne qui avait des ailes…_ »
 
 Une histoire imaginée et racontée par Justine.
 

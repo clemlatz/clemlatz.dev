@@ -8,7 +8,7 @@ category: sons
 audioUrl: https://dts.podtrac.com/redirect.mp3/https://sons-audioblogs.arte.tv/audioblogs/v2/sons/258125/258446/podcast_258446_kDy78.mp3
 ---
 
-« *Écoute-moi bien, je vais te faire visiter des étoiles…* »
+« _Écoute-moi bien, je vais te faire visiter des étoiles…_ »
 
 Ma fille Justine fabrique une machine à explorer l'univers.
 
@@ -16,7 +16,7 @@ Je l'ai interviewée pour en savoir plus.
 
 ### Transcription
 
-**JUSTINE** 
+**JUSTINE**
 
 Ça, je vais le lisser
 
@@ -42,19 +42,19 @@ Faut faire un trou dedans, et après tirer et faire un nœud.
 
 **JUSTINE**
 
-Et tout ça, c'est moi qui va le raconter, parce que c'est moi qui ai fait cette machine. Écoute-moi bien,  je vais te faire visiter des étoiles.
+Et tout ça, c'est moi qui va le raconter, parce que c'est moi qui ai fait cette machine. Écoute-moi bien, je vais te faire visiter des étoiles.
 
 **PAPA**
 
-Alors, pour commencer, est-ce que tu peux me dire comment tu t'appelles ? 
+Alors, pour commencer, est-ce que tu peux me dire comment tu t'appelles ?
 
 **JUSTINE**
 
-Je m'appelle Justine, mes parents m'ont appelée comme ça parce que j'étais très jolie et j'écoutais bien les choses. Je suis exploratrice, c'est avec moi que vous allez pouvoir aller explorer tout. 
+Je m'appelle Justine, mes parents m'ont appelée comme ça parce que j'étais très jolie et j'écoutais bien les choses. Je suis exploratrice, c'est avec moi que vous allez pouvoir aller explorer tout.
 
 **PAPA**
 
-Et à quoi elle sert cette machine que tu fabriques ? 
+Et à quoi elle sert cette machine que tu fabriques ?
 
 **JUSTINE**
 
@@ -63,15 +63,15 @@ très lointaines. Je l'ai fabriquée dans ma chambre où il y avait mon petit bu
 
 **PAPA**
 
-Quel matériau tu as utilisé pour fabriquer cette machine ? 
+Quel matériau tu as utilisé pour fabriquer cette machine ?
 
 **JUSTINE**
 
-Cette machine est composée de tissus, de bois et toutes choses comme ça. Le siège de la machine est une couverture pliée rouge avec des points blancs. 
+Cette machine est composée de tissus, de bois et toutes choses comme ça. Le siège de la machine est une couverture pliée rouge avec des points blancs.
 
-**PAPA** 
+**PAPA**
 
-Et comment on pilote ton engin ? Avec ce bâton ? 
+Et comment on pilote ton engin ? Avec ce bâton ?
 
 Ce bâton sert pour le diriger, comme je vous l'ai dit, je me mets dessus, sur le siège évidemment, je fais comme ça, comme ça, tout droit, en pente, et je force sur mes pieds quand je démarre. En le mettant comme ça, il va très haut, je peux voir tout et dès que j'arrive à quelque chose que j'aime bien, je m'arrête pour regarder par exemple une statue, quelque chose que je trouve joli. Ah, c'est dur ! En fait ça… Ensuite, il faudra faire un gros nœud. Comme ça, ça pourra pas s'en aller. Maintenant, on va faire l'inverse. En fait, ça c'est pour faire ce trou à l'arrière. Non ! Ce sera l'avant ici. Moi je m'assoierais ici.
 
@@ -85,7 +85,7 @@ J'ai essayé, et au bout d'un moment, je me suis rendu compte que ça n'allait p
 
 **HOUSTON**
 
-*T minus 15 seconds, guidance is internal. All engines running ! Lift off, we have a lift off ! 32 minutes past the hour !*
+_T minus 15 seconds, guidance is internal. All engines running ! Lift off, we have a lift off ! 32 minutes past the hour !_
 
 **JUSTINE**
 

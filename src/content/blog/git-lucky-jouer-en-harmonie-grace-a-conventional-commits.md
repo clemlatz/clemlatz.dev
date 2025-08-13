@@ -1,5 +1,5 @@
 ---
-title: "Git Lucky : Jouer en harmonie grâce à Conventional Commits"
+title: 'Git Lucky : Jouer en harmonie grâce à Conventional Commits'
 description: Comment rédiger de meilleurs message de commit peut nous aider à mieux travailler en équipe.
 pubDate: 2024-12-06
 heroImage: /blog/git-lucky.jpg

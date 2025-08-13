@@ -53,13 +53,13 @@ jest.mock('./api');
 
 test('it calls api on form submit', async () => {
   api.createBook = jest.fn(() => Promise.resolve({ id: 1 }));
-  const { 
-    getByPlaceholderText, getByText, findByDisplayValue 
-  } = render(<BookCreateForm />);
+  const { getByPlaceholderText, getByText, findByDisplayValue } = render(
+    <BookCreateForm />
+  );
 
   await act(async () => {
     const input = getByPlaceholderText(/Book's title/);
-    fireEvent.change(input, { target: { value: 'Yama Loka Terminus' }});
+    fireEvent.change(input, { target: { value: 'Yama Loka Terminus' } });
     await findByDisplayValue(/Yama Loka Terminus/);
 
     const button = getByText(/Create book/);
@@ -75,7 +75,7 @@ Now, let's say we want our component to redirect to the new book page once it's 
 ```jsx
 // BookCreateForm.js
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 
 import api from './api';
 
@@ -89,18 +89,18 @@ function CreateBookForm() {
     setCreatedId(id);
   }
 
-  return createdId ?
-    <Redirect to={`/book/${createdId}`}/> :
-    (
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder="Book's title"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-        />
-        <button>Create book</button>
-      </form>
-    );
+  return createdId ? (
+    <Redirect to={`/book/${createdId}`} />
+  ) : (
+    <form onSubmit={handleSubmit}>
+      <input
+        placeholder="Book's title"
+        value={title}
+        onChange={(event) => setTitle(event.target.value)}
+      />
+      <button>Create book</button>
+    </form>
+  );
 }
 
 export default CreateBookForm;
@@ -133,12 +133,12 @@ Now, our test runner will complain that we use `<Redirect>` outside of a router,
 // …
 import { BrowserRouter } from 'react-router-dom';
 // …
-  const { 
-    container, 
-    getByPlaceholderText, 
-    getByText, 
-    findByDisplayValue 
-  } = render(<BrowserRouter><BookCreateForm /></BrowserRouter>);
+const { container, getByPlaceholderText, getByText, findByDisplayValue } =
+  render(
+    <BrowserRouter>
+      <BookCreateForm />
+    </BrowserRouter>
+  );
 // …
 ```
 
@@ -157,12 +157,8 @@ That's because the redirection indeed happened, but there was no route to redire
 To ensure that our user gets redirected to `/book/1` (as the book's id returned by our API mock is `1`), we can add a route for that specific url with a simple text as children.
 
 ```jsx
-  const { 
-    container, 
-    getByPlaceholderText, 
-    getByText, 
-    findByDisplayValue 
-  } = render(
+const { container, getByPlaceholderText, getByText, findByDisplayValue } =
+  render(
     <BrowserRouter>
       <BookCreateForm />
       <Route path="/book/1">Book page</Route>
@@ -191,21 +187,17 @@ jest.mock('./api');
 
 test('it calls api on form submit', async () => {
   api.createBook = jest.fn(() => Promise.resolve({ id: 1 }));
-  const { 
-    container, 
-    getByPlaceholderText, 
-    getByText, 
-    findByDisplayValue 
-  } = render(
-    <BrowserRouter>
-      <BookCreateForm />
-      <Route path="/book/1">Book page</Route>
-    </BrowserRouter>
-  );
+  const { container, getByPlaceholderText, getByText, findByDisplayValue } =
+    render(
+      <BrowserRouter>
+        <BookCreateForm />
+        <Route path="/book/1">Book page</Route>
+      </BrowserRouter>
+    );
 
   await act(async () => {
     const input = getByPlaceholderText(/Book's title/);
-    fireEvent.change(input, { target: { value: 'Yama Loka Terminus' }});
+    fireEvent.change(input, { target: { value: 'Yama Loka Terminus' } });
     await findByDisplayValue(/Yama Loka Terminus/);
 
     const button = getByText(/Create book/);
@@ -216,16 +208,3 @@ test('it calls api on form submit', async () => {
   expect(container).toHaveTextContent(/Book page/);
 });
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -30,23 +30,23 @@ The explanation is that `parseInt` can take a second argument to specify the ari
 Now, the callback function passed as a parameter to the `map` method will be called with three arguments : its signature is `mapCallback(current, index, array)`. Thus, `parseInt` is called with `index` as the second parameter `base`.
 
 ```js
-mapCallback(current, index, array);  
-           /* ↓       ↓ */  
-   parseInt(string, base);
+mapCallback(current, index, array);
+/* ↓       ↓ */
+parseInt(string, base);
 ```
 
 So calling the map method on the `['121', '223', '362']` array, `parseInt` will be called three times with the following argument :
 
 ```js
-parseInt('121', 0, ['121', '223', '362']);  
-parseInt('223', 1, ['121', '223', '362']);  
+parseInt('121', 0, ['121', '223', '362']);
+parseInt('223', 1, ['121', '223', '362']);
 parseInt('362', 2, ['121', '223', '362']);
 ```
 
-*   calling `parseInt` with `0` as `base` returns `121` because it falls back to the default value `10`\*
-*   calling `parseInt` with `1` as `base`returns `Nan`because base `1` makes no sense
-*   when called with `2` as `base`, `parseInt` expect to receive a string representing a binary number, ie made of only 1 and 0
+- calling `parseInt` with `0` as `base` returns `121` because it falls back to the default value `10`\*
+- calling `parseInt` with `1` as `base`returns `Nan`because base `1` makes no sense
+- when called with `2` as `base`, `parseInt` expect to receive a string representing a binary number, ie made of only 1 and 0
 
 So here it is ! If you want to simplify `array.map((item) => myFunction(item))` to `array.map(myFunction)`, be sure that `myFunction` does not expect, as a second argument, something else that the current element index.
 
-* Thanks to my coworker Vincent Hardouin for pointing out that this a gross oversimplification of what really happens. To be safe, you should always specify the`base` argument instead of assuming it will default to `10` ([MDN explains why here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#:~:text=A%20value%20passed,is%2010%20(decimal).)).
+- Thanks to my coworker Vincent Hardouin for pointing out that this a gross oversimplification of what really happens. To be safe, you should always specify the`base` argument instead of assuming it will default to `10` ([MDN explains why here](<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#:~:text=A%20value%20passed,is%2010%20(decimal).>)).

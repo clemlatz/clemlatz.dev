@@ -8,7 +8,5 @@ export default function Career() {
     return <Experience key={experience.slug} {...experience} />;
   });
 
-  return (
-      <div className="Career">{experienceList}</div>
-  );
+  return <div className="Career">{experienceList}</div>;
 }

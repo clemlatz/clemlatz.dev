@@ -7,7 +7,7 @@ language: fr
 category: web
 ---
 
-[Tiko](https://www.tiko.fr/) (aussi appelé [Mon Pilotage elec](https://particuliers.engie.fr/landing/mon-pilotage-elec-sea.html) 
+[Tiko](https://www.tiko.fr/) (aussi appelé [Mon Pilotage elec](https://particuliers.engie.fr/landing/mon-pilotage-elec-sea.html)
 par Engie) est une excellente solution pour programmer et gérer ses radiateurs électriques depuis son
 téléphone, tout en surveillant sa consommation électrique. Pour ne rien gâcher, le service est gratuit, sans frais
 d’installation, sans abonnement et sans engagement.
@@ -45,7 +45,7 @@ Homebridge propose un important catalogue de plugins permettant d’interconnect
 n’étant pas nativement compatible avec HomeKit. Ici, c'est le plugin homebridge-tiko qui permet de faire le lien avec le
 service Tiko.
 
-Depuis l’interface d’administration Homebridge, cliquez sur **Plugins** puis recherchez le plugin *homebridge-tiko* et
+Depuis l’interface d’administration Homebridge, cliquez sur **Plugins** puis recherchez le plugin _homebridge-tiko_ et
 installez-le.
 
 ![Une recherche du plugin "homebridge-tiko" dans HomeBridge](/homebridge-tiko/installation-du-plugin-tiko.png)
@@ -107,9 +107,9 @@ ou de le mettre en mode "Boost" en le mettant sur "Chauffer".
 Voici les équivalences pour chaque mode :
 
 | Instruction "Maison" | Mode Tiko     |                                   Température |
-|----------------------|---------------|----------------------------------------------:|
+| -------------------- | ------------- | --------------------------------------------: |
 | Éteint               | Hors-gel      |                                            7° |
-| Refroidir            | Absence       |                                           17° | 
+| Refroidir            | Absence       |                                           17° |
 | Chauffer             | Boost         |                                           25° |
 | Autom.               | Programmation | Selon programmation <br/>ou consigne manuelle |
 

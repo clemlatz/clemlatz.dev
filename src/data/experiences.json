@@ -8,7 +8,13 @@
     "company": "Pix",
     "companyUrl": "https://www.pix.fr/",
     "startYear": 2021,
-    "tags": ["node", "ember", "clean-code", "clean-archi", "domain-driven-design"]
+    "tags": [
+      "node",
+      "ember",
+      "clean-code",
+      "clean-archi",
+      "domain-driven-design"
+    ]
   },
   {
     "jobTitle": {
