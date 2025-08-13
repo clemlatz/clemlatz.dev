@@ -38,7 +38,7 @@ Faut faire un trou dedans, et après tirer et faire un nœud.
 
 **PAPA**
 
-Ça m'a intrigué, alors je l'ai interviewé pour comprendre ce que c'était que cette machine et comment elle la construisait.
+Ça m'a intrigué, alors je l'ai interviewée pour comprendre ce que c'était que cette machine et comment elle la construisait.
 
 **JUSTINE**
 
