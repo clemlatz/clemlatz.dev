@@ -16,7 +16,7 @@ interface Props {
 
 const { title: directTitle, frontmatter, description: directDescription, openGraphType, canonicalUrl: directCanonicalUrl, previewImageUrl } = Astro.props;
 const title = directTitle ?? frontmatter?.title;
-const description = directDescription ?? frontmatter?.description;
+const description = directDescription frontmatter?.description;
 const canonicalUrl = directCanonicalUrl ?? frontmatter?.canonicalUrl;
 const fullTitle = title?.includes('Clément Latzarus')
   ? title : `${title ?? ''} · Clément Latzarus · développeur web`;
@@ -70,16 +70,8 @@ const links = [
 
 <style is:global>
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
     --background-gray: rgba(229, 233, 240, 50%);
-    --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 30%,
-        white 60%
-    );
+    --color-cta: #f60;
   }
 
   body {
@@ -110,8 +102,8 @@ const links = [
   }
 
   a.button {
-    background: #f60;
-    border: 1px solid #f60;
+    background: var(--color-cta);
+    border: 1px solid var(--color-cta);
     border-radius: 5px;
     color: white;
     opacity: 0.9;
