@@ -49,8 +49,9 @@ const links = [
   <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="011c5e01-358f-4e72-8d46-a1e19ca50bbc" />
 </head>
 <body>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
 <Header/>
-<main>
+<main id="main">
   <slot/>
 </main>
 <footer class="Footer">
@@ -72,6 +73,21 @@ const links = [
   :root {
     --background-gray: rgba(229, 233, 240, 50%);
     --color-cta: #f60;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 8px 16px;
+    border: 0;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 0;
   }
 
   body {
