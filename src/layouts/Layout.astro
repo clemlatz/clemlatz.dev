@@ -56,8 +56,9 @@ const links = [
 </main>
 <footer class="Footer">
   <div class="Footer__links">
-    {links.map(({name, url}) => <a href={url} rel="me" aria-label=`Me retrouver sur ${name}`>
-      <Icon name=`simple-icons:${name}`/>
+    {links.map(({name, url}) => <a href={url} rel="me">
+      <Icon name=`simple-icons:${name}` aria-hidden="true"/>
+      <span class="Footer__link-name">{name}</span>
     </a>)}
   </div>
 
@@ -161,18 +162,28 @@ const links = [
       justify-content: center;
       gap: 16px;
 
-      a, a:hover {
-        border: 0
+      a {
+        align-items: center;
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        opacity: 0.5;
+        transition: opacity 200ms;
+      }
+
+      a:hover {
+        border: 0;
+        opacity: 1;
       }
 
       [data-icon] {
-        opacity: 0.5;
         font-size: 2rem;
-        transition: 400ms;
       }
 
-      [data-icon]:hover {
-        opacity: 1;
+      .Footer__link-name {
+        font-size: 0.6rem;
+        text-transform: lowercase;
       }
     }
 
