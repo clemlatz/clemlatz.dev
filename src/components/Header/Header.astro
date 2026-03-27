@@ -27,6 +27,12 @@ const currentPath = new URL(Astro.request.url).pathname;
       <li>
         <a class={currentPath.startsWith("/blog") ? "active" : ""} href="/blog">blog</a>
       </li>
+        <li>
+            <a class={currentPath.startsWith("/bio") ? "active" : ""} href="/bio">
+                bio
+            </a>
+        </li>
+
       <li>
         <a class={currentPath.startsWith("/career") ? "active" : ""} href="/career">
           parcours
