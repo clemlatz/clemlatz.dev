@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Layout from "../../layouts/Layout.astro";
 import Language from "../../components/Language.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
@@ -10,13 +10,13 @@ type BlogPost = CollectionEntry<'blog'>;
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map((post: BlogPost) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: post,
   }));
 }
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <style>
@@ -80,7 +80,7 @@ const { Content } = await post.render();
 <Layout
     title=`${post.data.title} · Blog`
     description={post.data.description}
-    canonicalUrl={`/blog/${post.slug}`}
+    canonicalUrl={`/blog/${post.id}`}
     previewImageUrl={post.data.heroImage}
 >
   <article lang={post.data.language}>
@@ -111,7 +111,7 @@ const { Content } = await post.render();
       </div>
 
       {post.data.audioUrl && (
-        <AudioPlayer audioUrl={post.data.audioUrl} slug={post.slug} />
+        <AudioPlayer audioUrl={post.data.audioUrl} slug={post.id} />
       )}
 
       <Content/>
