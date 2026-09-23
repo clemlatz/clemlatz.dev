@@ -5,7 +5,7 @@ test('displays home page', async ({ page }) => {
 
   await expect(page).toHaveTitle('Clément Latzarus · développeur web');
   await expect(
-    page.getByRole('heading', { name: 'Clément Latzarus' })
+    page.getByRole('link', { name: 'Clément Latzarus' })
   ).toBeVisible();
 });
 
