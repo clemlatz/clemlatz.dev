@@ -19,6 +19,10 @@ projects.sort((a: Project, b: Project) => b.data.startYear - a.data.startYear);
     height: 200px;
     object-fit: cover;
   }
+
+  .card a:has(.card-img-top) {
+    border-bottom: none;
+  }
 </style>
 
 <Layout title="Projets" canonicalUrl="/projects">
