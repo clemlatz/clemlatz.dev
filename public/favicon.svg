@@ -1,9 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-    <text x="16" y="23" text-anchor="middle" font-family="'Raleway', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="-0.5">CL</text>
+    <g transform="translate(16 20.2) scale(0.0195 -0.0195) translate(-634 -353)" fill="#000">
+        <path d="M35 360Q35 425 58.0 487.5Q81 550 125.5 601.5Q170 653 234.0 683.5Q298 714 379 714Q475 714 545.0 670.5Q615 627 649 559L561 500Q541 543 510.5 568.0Q480 593 444.5 603.0Q409 613 375 613Q319 613 277.0 590.5Q235 568 206.5 531.0Q178 494 163.5 448.0Q149 402 149 356Q149 305 166.0 257.5Q183 210 213.5 173.5Q244 137 286.0 116.0Q328 95 378 95Q412 95 449.0 107.0Q486 119 517.5 144.5Q549 170 567 212L660 159Q638 106 591.5 69.0Q545 32 487.5 13.0Q430 -6 374 -6Q299 -6 237.0 25.5Q175 57 130.0 109.5Q85 162 60.0 227.5Q35 293 35 360Z"/>
+        <path transform="translate(684 0)" d="M80 0V710H192V99H573V0Z"/>
+    </g>
     <style>
-        text { fill: #000; }
+        g { fill: #000; }
         @media (prefers-color-scheme: dark) {
-            text { fill: #FFF; }
+            g { fill: #FFF; }
         }
     </style>
 </svg>
