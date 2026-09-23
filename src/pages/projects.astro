@@ -43,8 +43,8 @@ projects.sort((a: Project, b: Project) => b.data.startYear - a.data.startYear);
                   {project.data.startYear}{endYear}
                 </h6>
                 <p class="card-text">{project.data.type}</p>
-                <a href={project.data.url}>www</a> ·
-                <a href={project.data.source}>source</a>
+                <a href={project.data.url}>www</a>
+                {project.data.source && <> · <a href={project.data.source}>source</a></>}
               </div>
             </div>
         )
