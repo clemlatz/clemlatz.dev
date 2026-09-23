@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contacter Clément Latzarus · développeur web" canonicalUrl="/contact">
-  <form name="contact" action="/merci.html" enctype="multipart/form-data" data-netlify="true">
+  <form name="contact" action="/contact.php" method="post">
     <div class="form-floating mb-3">
       <input type="text" class="form-control" id="name" name="name" required>
       <label for="name">Votre nom</label>
